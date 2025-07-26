@@ -191,21 +191,3 @@ Steps:
 
 3. Remove overspill hexes by selecting the Blank terrain then clicking on unwanted hex or holding down left mouse button and moving over them (overspill is any not part of the 6 large hexes surrounding starting large hex)
 4. Add label at Continent Level with the text "6mi/hex"
-
-## Generate Sub-level Hex Terrain
-
-Steps:
-
-1. In Hex Population Excel->1. Hex Terrain update the L8 cell to re-run the random number generators (check first hexes have some additional plains, e.g. low numbers)
-2. Copy all the randomly generated numbers (L11:L41)
-3. Select first cell under Pasted in the Subhex table (B11)
-4. Apply the generated terrains
-   - In Worldographer optionally blank out all hexes in center large hex except center starting hex to make it easier to see which hexes have had terrain from spreadsheet applied
-   - Optionally make the center hex Farmland if village with farms
-   - Apply randomly generated from the column that corresponds to the Atlas-level terrain, e.g. Plains, starting at row 11, e.g. C11, to surrounding hexes until the terrain type starting at hex above starting hex. Proceed up until top of large hex reached, e.g. C11->40.42, C12->40.23, then proceed from hex to the right down to bottom of large hex, or until change in terrain type, e.g. C13->41.22, C14->41.23, C15->41.21, etc.
-   - Repeat until all hexes adjacent hexes to center starting hex are filled:
-     - When change in terrain reached set that hex to the new terrain type then start over at hex below or to the right of starting hex, e.g. 40.26, and proceed to bottom of large hex then proceed from hex to left up to top of large hex, or until change in terrain type
-     - When change in terrain reached set that hex to the new terrain type then start over hex at below or to the left starting hex
-   - Now apply adhoc to remaining hexes using generated terrain as guidance, e.g. pick an unfilled hex to start applying the rest of the terrain to
-   - Depressions & Ponds: retains prior terrain type and apply special marking indicating it's a depression or pond
-   - 1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that

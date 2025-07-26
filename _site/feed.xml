@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-26T11:48:29-10:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">OSR Hex Generation</title><link href="http://localhost:4000/2025/07/25/osr-hex-generation.html" rel="alternate" type="text/html" title="OSR Hex Generation" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/25/osr-hex-generation</id><content type="html" xml:base="http://localhost:4000/2025/07/25/osr-hex-generation.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-26T11:51:30-10:00</updated><id>/feed.xml</id><entry><title type="html">OSR Hex Generation</title><link href="/2025/07/25/osr-hex-generation.html" rel="alternate" type="text/html" title="OSR Hex Generation" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>/2025/07/25/osr-hex-generation</id><content type="html" xml:base="/2025/07/25/osr-hex-generation.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
 
 <p>This approach can be used for any OSR (Old School Renaissance or Old School Revival) game like the original AD&amp;D, <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics (DCC)</a>, <a href="https://www.thearcanelibrary.com/collections/shadowdark-rpg">Shadowdark</a>, <a href="https://www.drivethrurpg.com/en/product/396879/deathbringer-rpg">Deathbringer</a>, <a href="https://jasontocci.itch.io/grave">Grave</a>, <a href="https://level2janitor.itch.io/iron-halberd">Iron Halberd</a>, <a href="https://questingbeast.itch.io/knave">Knave</a>, <a href="https://www.basicfantasy.org/">Basic Fantasy</a>, and many others based on the original DnD rules.</p>
 
@@ -342,30 +342,4 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
 <ol>
   <li>Remove overspill hexes by selecting the Blank terrain then clicking on unwanted hex or holding down left mouse button and moving over them (overspill is any not part of the 6 large hexes surrounding starting large hex)</li>
   <li>Add label at Continent Level with the text “6mi/hex”</li>
-</ol>
-
-<h2 id="generate-sub-level-hex-terrain">Generate Sub-level Hex Terrain</h2>
-
-<p>Steps:</p>
-
-<ol>
-  <li>In Hex Population Excel-&gt;1. Hex Terrain update the L8 cell to re-run the random number generators (check first hexes have some additional plains, e.g. low numbers)</li>
-  <li>Copy all the randomly generated numbers (L11:L41)</li>
-  <li>Select first cell under Pasted in the Subhex table (B11)</li>
-  <li>Apply the generated terrains
-    <ul>
-      <li>In Worldographer optionally blank out all hexes in center large hex except center starting hex to make it easier to see which hexes have had terrain from spreadsheet applied</li>
-      <li>Optionally make the center hex Farmland if village with farms</li>
-      <li>Apply randomly generated from the column that corresponds to the Atlas-level terrain, e.g. Plains, starting at row 11, e.g. C11, to surrounding hexes until the terrain type starting at hex above starting hex. Proceed up until top of large hex reached, e.g. C11-&gt;40.42, C12-&gt;40.23, then proceed from hex to the right down to bottom of large hex, or until change in terrain type, e.g. C13-&gt;41.22, C14-&gt;41.23, C15-&gt;41.21, etc.</li>
-      <li>Repeat until all hexes adjacent hexes to center starting hex are filled:
-        <ul>
-          <li>When change in terrain reached set that hex to the new terrain type then start over at hex below or to the right of starting hex, e.g. 40.26, and proceed to bottom of large hex then proceed from hex to left up to top of large hex, or until change in terrain type</li>
-          <li>When change in terrain reached set that hex to the new terrain type then start over hex at below or to the left starting hex</li>
-        </ul>
-      </li>
-      <li>Now apply adhoc to remaining hexes using generated terrain as guidance, e.g. pick an unfilled hex to start applying the rest of the terrain to</li>
-      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
-      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that</li>
-    </ul>
-  </li>
 </ol>]]></content><author><name>jstoops</name></author><summary type="html"><![CDATA[I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.]]></summary></entry></feed>
