@@ -4,4 +4,4 @@ title: About
 
 # About page
 
-This page tells you a little bit about me.
+A blog where old school gamers share ideas, tips and tricks on running and playing TTRPGs.

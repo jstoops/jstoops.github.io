@@ -1,5 +1,9 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
-  {% endfor %}
-</nav>
+<div class='rpgui-center'>
+  <nav>
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>
+        <button type="button" class="rpgui-button" style="width:20%;">{{ item.name }}</button>
+      </a>
+    {% endfor %}
+  </nav>
+</div>

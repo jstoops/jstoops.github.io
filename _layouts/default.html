@@ -4,11 +4,25 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/rpgui.min.css">
+    <script src="/assets/js/rpgui.min.js"></script>
     {% feed_meta %}
     {% seo %}
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <div class='rpgui-content rpgui-cursor-default' style='overflow-y:scroll;'>
+      <div id='container'>
+        <div id='main'></div>
+        <div class="inner rpgui-container framed" style="position:relative">
+          <header>
+            <h1 style="font-size:250%">Old School RPG Blog</h1>
+            <hr class="golden">
+            <h2 style="font-size:175%">Ramblings from old-school gamers</h2>
+          </header>
+          {% include navigation.html %}
+          {{ content }}
+        </div>
+      </div>
+    </div>
   </body>
 </html>

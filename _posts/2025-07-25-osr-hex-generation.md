@@ -1,5 +1,6 @@
 ---
 author: jstoops
+title: OSR Hex Generation
 ---
 
 I'm planning on starting an [Old School Essentials](https://necroticgnome.com/pages/about-old-school-essentials) game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by [Games from the Front](https://www.youtube.com/@GamesfromtheFront) that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: [Old School Essentials](https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_).
@@ -145,9 +146,13 @@ Terrain Guide:
 | Depression      |  20   |  20   |   20   |  20   |   20   |  20   |    20     |  20   |
 
 <pre>
-*   1 in 10 also includes <b>hills</b> aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
-**  1 in 10 also includes <b>forest</b> aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
-*** 1 in 20 have a <b>pass</b> which leads through the range aka Shapes->Preset: Trail->Curve, reduce Width, e.g. 5 click points through mountain to represent pass.
+*   1 in 10 also includes <b>hills</b>
+    aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
+**  1 in 10 also includes <b>forest</b>
+    aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
+*** 1 in 20 have a <b>pass</b> which leads through the range
+    aka Shapes->Preset: Trail->Curve, reduce Width, e.g. 5 click
+    points through mountain to represent pass.
 </pre>
 
 Source: DMG p174 APPENDIX B: RANDOM WILDERNESS TERRAIN table
