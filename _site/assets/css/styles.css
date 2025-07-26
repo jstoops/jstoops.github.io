@@ -23,7 +23,6 @@ pre {
 table, th, td {
     border: 1px solid #f0f0f0;
     color: #ffffff;
-    font-size:90%;
 }
 
 th, td {
@@ -62,4 +61,8 @@ thead th, tbody tr:nth-child(even) {
 #blog-post img {
     display: block;
     margin: 0 auto;
+}
+
+.rpgui-content .roll-results textarea {
+  height: fit-content;
 }

@@ -114,29 +114,33 @@ Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to genera
 
 Steps:
 
-1. Roll a d20 6 times, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.
+1. <a onClick="generateTerrain(document.getElementById('terrain-type').value, 6, 20, 'terrain-rolls', 'terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.
 2. Define the terrain type for each roll using the table below by matching the result under your starting tile's terrain column, i.e. Plain, with the terrain type, e.g. if you rolled a 12 it is Scrub
 3. Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
 
+<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
+
+   <label>Starting Tile:</label>
+   <select id="terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+      <option value="Plains" selected="">Plains</option>
+      <option value="Scrub">Scrub</option>
+      <option value="Forest">Forest</option>
+      <option value="Desert">Desert</option>
+      <option value="Hills">Hills</option>
+      <option value="Mountains">Mountains</option>
+      <option value="Marsh">Marsh</option>
+   </select>
+  <label>Rolls:</label> <input id="terrain-rolls" />
+  <label>Terrain Types:</label> <textarea id="terrain-types" rows="6"></textarea>
+</div>
+
 <img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" />
 
-Terrain Guide:
-**Plain:** tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. _Farmland_ in Worldographer
-**Scrub:** brush, veldt, bush, thickets, brackens e.g. _Grassland_ in Worldographer
-**Forest:** woods, jungle, groves and copses (light forest) e.g. _Forest Decid._, _Forest Evrgr._, etc. in Worldographer
-**Rough:** badlands e.g. _Other Badland_ in Worldographer
-**Desert:** barrens, waste, flat, snowfield e.g. _Desert Sandy_ in Worldographer
-**Hills:** ridges, bluffs, dunes e.g. _Hills_ in Worldographer
-**Mountains:** mesas, glacier, tors e.g. _Mtn_ in Worldographer
-**Marsh:** fen, slough, swamp, bog, mire, quagmire, morass e.g. _Marsh_ in Worldographer
-**Pond:** pools, tarn, lake e.g. _Cosmic Planet High Water Medium Temperature_ with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer
-**Depression:** gorge, rift, valley, canyon e.g. _Symbol Crater_ with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer
-
-|                 | Plain | Scrub | Forest | Rough | Desert | Hills | Mountains | Marsh |
+|                 | Plains | Scrub | Forest | Rough | Desert | Hills | Mountains | Marsh |
 | :-------------- | :---: | :---: | :----: | :---: | :----: | :---: | :-------: | :---: |
 | Plains          | 1-11  |  1-3  |   1    |  1-2  |  1-3   |   1   |     1     |  1-2  |
 | Scrub           |  12   | 4-11  |  2-4   |  3-4  |  4-5   |  2-3  |     2     |  3-4  |
-| Forest\*        |  13   | 12-13 | 12-23  | 5-14  |  N/A   |  4-5  |     3     |  5-6  |
+| Forest\*        |  13   | 12-13 | 12-14  |   5   |  N/A   |  4-5  |     3     |  5-6  |
 | Rough           |  14   |  14   |   15   |  6-8  |  6-8   |  6-7  |    4-5    |   7   |
 | Desert          |  15   |  15   |  N/A   | 9-10  |  9-14  |   8   |     6     |  N/A  |
 | Hills\*\*       |  16   |  16   |   16   | 11-15 |   15   | 9-14  |   7-10    |   8   |
@@ -155,7 +159,20 @@ Terrain Guide:
     points through mountain to represent pass.
 </pre>
 
-Source: DMG p174 APPENDIX B: RANDOM WILDERNESS TERRAIN table
+Terrain Guide:
+
+- **Plain:** tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. _Farmland_ in Worldographer
+- **Scrub:** brush, veldt, bush, thickets, brackens e.g. _Grassland_ in Worldographer
+- **Forest:** woods, jungle, groves and copses (light forest) e.g. _Forest Decid._, _Forest Evrgr._, etc. in Worldographer
+- **Rough:** badlands e.g. _Other Badland_ in Worldographer
+- **Desert:** barrens, waste, flat, snowfield e.g. _Desert Sandy_ in Worldographer
+- **Hills:** ridges, bluffs, dunes e.g. _Hills_ in Worldographer
+- **Mountains:** mesas, glacier, tors e.g. _Mtn_ in Worldographer
+- **Marsh:** fen, slough, swamp, bog, mire, quagmire, morass e.g. _Marsh_ in Worldographer
+- **Pond:** pools, tarn, lake e.g. _Cosmic Planet High Water Medium Temperature_ with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer
+- **Depression:** gorge, rift, valley, canyon e.g. _Symbol Crater_ with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer
+
+Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN table
 
 Can continue to build out map at this level, if desired.
 

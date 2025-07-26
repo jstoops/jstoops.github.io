@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/assets/css/rpgui.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/rpgui.min.js"></script>
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <script src="/assets/js/scripts.js"></script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>OSR Hex Generation</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -15,12 +16,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials." />
 <meta property="og:description" content="I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials." />
+<link rel="canonical" href="http://localhost:4000/2025/07/25/osr-hex-generation.html" />
+<meta property="og:url" content="http://localhost:4000/2025/07/25/osr-hex-generation.html" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-07-25T00:00:00-10:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="OSR Hex Generation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jstoops"},"dateModified":"2025-07-25T00:00:00-10:00","datePublished":"2025-07-25T00:00:00-10:00","description":"I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.","headline":"OSR Hex Generation","mainEntityOfPage":{"@type":"WebPage","@id":"/2025/07/25/osr-hex-generation.html"},"url":"/2025/07/25/osr-hex-generation.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jstoops"},"dateModified":"2025-07-25T00:00:00-10:00","datePublished":"2025-07-25T00:00:00-10:00","description":"I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.","headline":"OSR Hex Generation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/07/25/osr-hex-generation.html"},"url":"http://localhost:4000/2025/07/25/osr-hex-generation.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -30,7 +33,7 @@
         <div id='main'></div>
         <div class="inner rpgui-container framed" style="position:relative">
           <header>
-            <h1 style="font-size:250%">Old School RPG Blog</h1>
+            <h1 style="font-size:250%">Old School Gamer Blog</h1>
             <hr class="golden">
             <h2 style="font-size:175%">Ramblings from old-school gamers</h2>
           </header>
@@ -212,30 +215,34 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
 <p>Steps:</p>
 
 <ol>
-  <li>Roll a d20 6 times, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
+  <li><a onclick="generateTerrain(document.getElementById('terrain-type').value, 6, 20, 'terrain-rolls', 'terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
   <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plain, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
   <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells</li>
 </ol>
 
-<p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
+<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
 
-<p>Terrain Guide:
-<strong>Plain:</strong> tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. <em>Farmland</em> in Worldographer
-<strong>Scrub:</strong> brush, veldt, bush, thickets, brackens e.g. <em>Grassland</em> in Worldographer
-<strong>Forest:</strong> woods, jungle, groves and copses (light forest) e.g. <em>Forest Decid.</em>, <em>Forest Evrgr.</em>, etc. in Worldographer
-<strong>Rough:</strong> badlands e.g. <em>Other Badland</em> in Worldographer
-<strong>Desert:</strong> barrens, waste, flat, snowfield e.g. <em>Desert Sandy</em> in Worldographer
-<strong>Hills:</strong> ridges, bluffs, dunes e.g. <em>Hills</em> in Worldographer
-<strong>Mountains:</strong> mesas, glacier, tors e.g. <em>Mtn</em> in Worldographer
-<strong>Marsh:</strong> fen, slough, swamp, bog, mire, quagmire, morass e.g. <em>Marsh</em> in Worldographer
-<strong>Pond:</strong> pools, tarn, lake e.g. <em>Cosmic Planet High Water Medium Temperature</em> with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer
-<strong>Depression:</strong> gorge, rift, valley, canyon e.g. <em>Symbol Crater</em> with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer</p>
+   <label>Starting Tile:</label>
+   <select id="terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+      <option value="Plains" selected="">Plains</option>
+      <option value="Scrub">Scrub</option>
+      <option value="Forest">Forest</option>
+      <option value="Desert">Desert</option>
+      <option value="Hills">Hills</option>
+      <option value="Mountains">Mountains</option>
+      <option value="Marsh">Marsh</option>
+   </select>
+  <label>Rolls:</label> <input id="terrain-rolls" />
+  <label>Terrain Types:</label> <textarea id="terrain-types" rows="6"></textarea>
+</div>
+
+<p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
 
 <table>
   <thead>
     <tr>
       <th style="text-align: left"> </th>
-      <th style="text-align: center">Plain</th>
+      <th style="text-align: center">Plains</th>
       <th style="text-align: center">Scrub</th>
       <th style="text-align: center">Forest</th>
       <th style="text-align: center">Rough</th>
@@ -272,8 +279,8 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
       <td style="text-align: left">Forest*</td>
       <td style="text-align: center">13</td>
       <td style="text-align: center">12-13</td>
-      <td style="text-align: center">12-23</td>
-      <td style="text-align: center">5-14</td>
+      <td style="text-align: center">12-14</td>
+      <td style="text-align: center">5</td>
       <td style="text-align: center">N/A</td>
       <td style="text-align: center">4-5</td>
       <td style="text-align: center">3</td>
@@ -369,7 +376,22 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
     points through mountain to represent pass.
 </pre>
 
-<p>Source: DMG p174 APPENDIX B: RANDOM WILDERNESS TERRAIN table</p>
+<p>Terrain Guide:</p>
+
+<ul>
+  <li><strong>Plain:</strong> tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. <em>Farmland</em> in Worldographer</li>
+  <li><strong>Scrub:</strong> brush, veldt, bush, thickets, brackens e.g. <em>Grassland</em> in Worldographer</li>
+  <li><strong>Forest:</strong> woods, jungle, groves and copses (light forest) e.g. <em>Forest Decid.</em>, <em>Forest Evrgr.</em>, etc. in Worldographer</li>
+  <li><strong>Rough:</strong> badlands e.g. <em>Other Badland</em> in Worldographer</li>
+  <li><strong>Desert:</strong> barrens, waste, flat, snowfield e.g. <em>Desert Sandy</em> in Worldographer</li>
+  <li><strong>Hills:</strong> ridges, bluffs, dunes e.g. <em>Hills</em> in Worldographer</li>
+  <li><strong>Mountains:</strong> mesas, glacier, tors e.g. <em>Mtn</em> in Worldographer</li>
+  <li><strong>Marsh:</strong> fen, slough, swamp, bog, mire, quagmire, morass e.g. <em>Marsh</em> in Worldographer</li>
+  <li><strong>Pond:</strong> pools, tarn, lake e.g. <em>Cosmic Planet High Water Medium Temperature</em> with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer</li>
+  <li><strong>Depression:</strong> gorge, rift, valley, canyon e.g. <em>Symbol Crater</em> with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer</li>
+</ul>
+
+<p>Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN table</p>
 
 <p>Can continue to build out map at this level, if desired.</p>
 
