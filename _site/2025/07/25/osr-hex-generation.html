@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/rpgui.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>OSR Hex Generation</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -16,14 +16,12 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials." />
 <meta property="og:description" content="I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials." />
-<link rel="canonical" href="http://localhost:4000/2025/07/25/osr-hex-generation.html" />
-<meta property="og:url" content="http://localhost:4000/2025/07/25/osr-hex-generation.html" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-07-25T00:00:00-10:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="OSR Hex Generation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jstoops"},"dateModified":"2025-07-25T00:00:00-10:00","datePublished":"2025-07-25T00:00:00-10:00","description":"I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.","headline":"OSR Hex Generation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/07/25/osr-hex-generation.html"},"url":"http://localhost:4000/2025/07/25/osr-hex-generation.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jstoops"},"dateModified":"2025-07-25T00:00:00-10:00","datePublished":"2025-07-25T00:00:00-10:00","description":"I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.","headline":"OSR Hex Generation","mainEntityOfPage":{"@type":"WebPage","@id":"/2025/07/25/osr-hex-generation.html"},"url":"/2025/07/25/osr-hex-generation.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -210,20 +208,26 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
 
 <h2 id="generate-surroundings-atlas-level-hex-terrain">Generate Surroundings Atlas-level Hex Terrain</h2>
 
-<p>Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to generate terrain surrounding starting tile.</p>
+<p>Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that’s just 6 tiles.</p>
 
-<p>Steps:</p>
+<p>The tool below allows you to select the starting tile terrain type, “Plains” in this caase, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.</p>
+
+<p>Here’s the steps to generate terrain:</p>
 
 <ol>
-  <li><a onclick="generateTerrain(document.getElementById('terrain-type').value, 6, 20, 'terrain-rolls', 'terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
-  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plain, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
-  <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells</li>
+  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
+  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
+  <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
+    <ul>
+      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
+      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)</li>
+    </ul>
+  </li>
 </ol>
 
 <div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
-
    <label>Starting Tile:</label>
-   <select id="terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+   <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
       <option value="Scrub">Scrub</option>
       <option value="Forest">Forest</option>
@@ -232,8 +236,9 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
       <option value="Mountains">Mountains</option>
       <option value="Marsh">Marsh</option>
    </select>
-  <label>Rolls:</label> <input id="terrain-rolls" />
-  <label>Terrain Types:</label> <textarea id="terrain-types" rows="6"></textarea>
+  <label>Rolls:</label> <input id="atlas-terrain-rolls" />
+  <label>Terrain Types:</label> <textarea id="atlas-terrain-types" rows="6"></textarea>
+  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
 <p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
@@ -401,7 +406,7 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
 
 <p>Starting hex = Center hex of large hex, e.g. 40.24, and should have village/town icon and label from Atlas-level</p>
 
-<p>Steps:</p>
+<p>Here’s the steps to drill into the central hex at the Atlas-level to start creating the map you can use to in the first few sessions for the players to start their hex crawl:</p>
 
 <ol>
   <li>In Worldographer, change Level to CONTINENT</li>
@@ -415,6 +420,413 @@ Settings based upon limits (if one can speak of fantasy limits) can be very inte
   <li>Add label at Continent Level with the text “6mi/hex”</li>
 </ol>
 
+<h2 id="generate-sub-level-hex-terrain">Generate Sub-level Hex Terrain</h2>
+
+<p>This follows the same process as generatign terrain at the Atlas-level except it is for 31 hexes this time.</p>
+
+<p>Here’s the steps to generate the terrain for the times surrounding your starting settlement:</p>
+
+<ol>
+  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
+  <li>Check first few hexes have some additional plains, e.g. low numbers, so it makes sence for a settlement like this and re-roll, if necessary, until terrain distribution feels right for what you have in mind for this area</li>
+  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains</li>
+  <li>Apply the generated terrains to all the tiles representing the higher level Atlas tile radiating out from the starting hex, e.g. 40.25
+    <ul>
+      <li>In Worldographer optionally blank out all hexes in center large hex except center starting hex to make it easier to see which hexes have had terrain from spreadsheet applied</li>
+    </ul>
+    <ul>
+      <li>Optionally make the center hex Farmland if village with farms</li>
+      <li>Apply randomly generated terrain to surrounding hexes until the terrain type starting at hex above starting hex. Proceed up until top of large hex reached, e.g. 40.42, 40.23, then proceed from hex to the right down to bottom of large hex, or until change in terrain type, e.g. 41.22, 41.23, 41.21, etc.</li>
+      <li>Repeat until all hexes adjacent hexes to center starting hex are filled:
+        <ul>
+          <li>When change in terrain reached set that hex to the new terrain type then start over at hex below or to the right of starting hex, e.g. 40.26, and proceed to bottom of large hex then proceed from hex to left up to top of large hex, or until change in terrain type</li>
+          <li>When change in terrain reached set that hex to the new terrain type then start over hex at below or to the left starting hex</li>
+        </ul>
+      </li>
+      <li>Now apply adhoc to remaining hexes using generated terrain as guidance, e.g. pick an unfilled hex to start applying the rest of the terrain to</li>
+      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
+      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="roll-results">
+   <label>Starting Tile:</label>
+   <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+      <option value="Plains" selected="">Plains</option>
+      <option value="Scrub">Scrub</option>
+      <option value="Forest">Forest</option>
+      <option value="Desert">Desert</option>
+      <option value="Hills">Hills</option>
+      <option value="Mountains">Mountains</option>
+      <option value="Marsh">Marsh</option>
+   </select>
+  <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="3"></textarea>
+  <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
+  <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<h2 id="determine-features-location--type">Determine Features, Location &amp; Type</h2>
+
+<p>Use Table 1.1 – Feature Types on page 7 and Figure One - Placing Lairs Features on page 5 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> to add additional, interesting features to the core hex. 1d6 features and 1d6 lairs in each 6-mile hex seems too dense, therefore, instead of every 6-mile hex up it a level so do every 30-mile hex has 6 features and 5 lairs, i.e. the entire large hex at the Sub-level. Feel free to adjust these numbers or roll to randomize the number per 30-mile hex.</p>
+
+<p>Here’s the steps to generate feature and lairs:</p>
+
+<ol>
+  <li><a onclick="generateFeatures(6, 20, 100, 'feature-rolls', 'feature-results')">Roll a d20 and a d100 six times</a> for the features and their location</li>
+  <li>Using the figure for hex numbers 1-31 find the hex for each Location &amp; add an icon with text representing the feature</li>
+  <li><a onclick="generateLairs(5, 100, 'lair-results')">Roll a d100 5 times</a> for the lairs</li>
+  <li>Using the figure for hex numbers 1-31 find the hex for each Location &amp; add an icon a lair</li>
+</ol>
+
+<div class="roll-results" style="float:left; width: 45%; padding-right: 10px;">
+  <h2>Features</h2>
+  <label>Rolls:</label> <input id="feature-rolls" />
+  <label>Features:</label> <textarea id="feature-results" rows="6"></textarea>
+  <button onclick="generateFeatures(6, 20, 100, 'feature-rolls', 'feature-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div class="roll-results" style="float:right; width: 45%;">
+  <h2>Lairs</h2>
+  <label>Lairs:</label> <textarea id="lair-results" rows="5"></textarea>
+  <button onclick="generateLairs(5, 100, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div style="clear: both;"></div>
+
+<p><strong>Table 1.1 – Feature Types</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">d20</th>
+      <th style="text-align: left">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1-4</td>
+      <td style="text-align: left">Geologic</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5-8</td>
+      <td style="text-align: left">Structure</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">9-12</td>
+      <td style="text-align: left">Resource</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">13</td>
+      <td style="text-align: left">Hazard</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">14</td>
+      <td style="text-align: left">Sign</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">15</td>
+      <td style="text-align: left">Dungeon</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16-17</td>
+      <td style="text-align: left">Terrain</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">18</td>
+      <td style="text-align: left">Settlement</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">19</td>
+      <td style="text-align: left">Water</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">20</td>
+      <td style="text-align: left">Magic</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Use the figure below to determine the hex numbers for placing the features and lairs.</p>
+
+<p><img src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
+
+<p>Source: <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a></p>
+
+<h3 id="flesh-out-features">Flesh Out Features</h3>
+
+<p>For each feature generated determine the details for it using the Features section on pages 6-8 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a>.</p>
+
+<h4 id="depressions">Depressions</h4>
+
+<p>Use <a href="./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf">Filling in the Blanks</a> under 2.2. Change in Elevation on p. 13-14.</p>
+
+<p>Steps:</p>
+
+<ol>
+  <li>
+    <p>Why did the elevation change? <a onclick="elevationChangeReason(100, 'elevation-change-reason')">Roll a d100</a></p>
+
+    <ul>
+      <li>Use the <em>Elevation Change Reason Table</em> below to determine reason</li>
+      <li><input id="elevation-change-reason" placeholder="Why did the elevation change?" /></li>
+    </ul>
+  </li>
+  <li>
+    <p>Lower by how much? <a onclick="elevationChangeAmount(100, 'elevation-change-amount')">Roll a d100</a></p>
+
+    <ul>
+      <li>Use the <em>Elevation Change Amount Table</em> below to determine by how much</li>
+      <li><input id="elevation-change-amount" placeholder="Lower by how much?" /></li>
+    </ul>
+  </li>
+  <li>
+    <p>How large is the area with changed terrain? <a onclick="elevationChangeArea(100, 'elevation-change-area')">Roll a d100</a></p>
+
+    <ul>
+      <li>Use the <em>Elevation Change Area Table</em> below to determine how large an area changed</li>
+      <li><input id="elevation-change-area" placeholder="How large is the area with changed terrain?" /></li>
+    </ul>
+  </li>
+  <li>
+    <p>Is the terrain within the change of elevation different than the surrounds? <a onclick="document.getElementById('elevation-change-difference').value=rollMultipleDice(1, 100)*100">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.</p>
+
+    <ul>
+      <li>There is a <em>1-4 in 6 chance</em> that the change in elevation represents a differing terrain type than the surrounding environs.</li>
+      <li>This change in terrain will most often (1-4) be within one degree of the surrounding terrain, or (5-6) within two degrees.</li>
+      <li>If one degree of change then roll a d3 (or d6/2)</li>
+      <li><input id="elevation-change-difference" placeholder="1d6x100" /></li>
+    </ul>
+  </li>
+  <li>
+    <p>Describe depression in hex notes and update label with depression type</p>
+  </li>
+</ol>
+
+<p><em>Elevation Change Reason Table</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1-75</td>
+      <td>The change is natural, the result of time and the elements.</td>
+    </tr>
+    <tr>
+      <td>76-90</td>
+      <td>The change is natural but out of place or the result of natural violence; a rock formation that does not belong in the area, a gorge formed not by the slow erosion from a river but an active fault line, etc. It could also be a crater left by, say, a meteor.</td>
+    </tr>
+    <tr>
+      <td>91-96</td>
+      <td>The change is unnatural but clearly the work of years of physical labor.</td>
+    </tr>
+    <tr>
+      <td>97-99</td>
+      <td>The change is unnatural and clearly the work of magic.</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>Referee’s choice</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Elevation Change Amount Table</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1-60</td>
+      <td>The land is 5d20 yards lower or higher than the surrounding area.</td>
+    </tr>
+    <tr>
+      <td>61-75</td>
+      <td>The land is 1d6x100 yards lower or higher than the surrounding area.</td>
+    </tr>
+    <tr>
+      <td>76-100</td>
+      <td>The land is 1d20x100 yards lower or higher than the surrounding area.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Elevation Change Area Table</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1-35</td>
+      <td>a single subhex</td>
+    </tr>
+    <tr>
+      <td>36-70</td>
+      <td>1d4+1 subhexes</td>
+    </tr>
+    <tr>
+      <td>71-85</td>
+      <td>3d4 subhexes</td>
+    </tr>
+    <tr>
+      <td>86-98</td>
+      <td>4d8 subhexes</td>
+    </tr>
+    <tr>
+      <td>99-100</td>
+      <td>1d4+1 total hexes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Degree of Change in Terrain Table</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1-50</td>
+      <td><strong>Within one degree.</strong> The basic terrain type remains the same, with a slight change. For instance, farmland, grazing land, grasslands, shrublands and savannas are all flat, relatively treeless terrains that are within one degree of one another. Likewise, a hill could be barren, grassy, or forested and still be within one degree of the basic “hill” type.</td>
+    </tr>
+    <tr>
+      <td>51-85</td>
+      <td><strong>Within two degrees.</strong> An area of a grasslands hex could be hilly, or an area of a hilly hex could be mountainous, but a mountain still wouldn’t be found in the middle of a flat plain.</td>
+    </tr>
+    <tr>
+      <td>86-95</td>
+      <td><strong>Unusual.</strong> This is an unusual feature that is non-magical in nature but rarely seen. Roll 1d100 below to determine the actual feature. If the existing terrain doesn’t fit with the feature, roll again.</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td><strong>Magical/magically created terrain.</strong> This category includes things like fungal forests, fields of flowers that magically put those walking through them to sleep, areas where gravity is increased or decreased, etc. The terrain itself could have a magical effect — for instance, it could be a null-magic zone, where no magic functions — or it could be obviously magically created, such as an entire hex where the ground has been turned into bright green glass. Regardless, the terrain type here is both clearly out of place and clearly artificial/magical in nature.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Unusal Feature Terrain Table</em></p>
+
+<p>| :——: | :——————————————————————– |
+|   1-10   | Glacier. A mass of densely packed,
+slowly moving snow. Those on the glacier
+have their movement reduced by 1/2,
+suffer the same risk of sun-blindness as
+on a salt flat, and have a 1 in 6 chance
+of encountering a hazard for each subhex
+they enter on the glacier (most likely a
+crevasse or a sinkhole).
+11-20. Hot springs. See the section on
+water features in Chapter Ten.
+21-30. Landlocked sand dunes. All that
+remains of an ancient, land-locked sea or
+ocean. Treat as desert.
+31-40. Mudflats. A stretch of barren clay
+that cracks when it dries. When wet, it
+becomes slick and difficult to traverse.
+Reduce movement by 1/2 when traveling
+through a wet mudflat.
+41-50. Other.
+51-60. Petrified forest. The remains of an
+ancient forest can be found here, the
+trees turned to stone. There’s only a 1 in
+6 chance the trees are actually standing,
+otherwise they are lying on the ground.
+61-70. Rock Formations. Unusual rock
+formations dot the landscape: towers
+of stone such as the Devil’s Tower in
+Wyoming or the Stone Forest in China,
+or unusual boulder deposits (see Chapter
+Two for more information).</p>
+
+<h4 id="resources">Resources</h4>
+
+<p>PCs could mine the minerals, harvest the vegetables, hunt the game, etc. to create XP and income.</p>
+
+<p>Use <a href="./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf">Filling in the Blanks</a> under 4. Resources on p. 48-56.</p>
+
+<p>Steps:</p>
+
+<ol>
+  <li>Exceptional resource? 1d20</li>
+  <li>Category of resource? 1d20</li>
+  <li>Additional roles for more details on resource</li>
+  <li>Describe resource in hex notes and update label with resource name</li>
+</ol>
+
+<h4 id="sign">Sign</h4>
+
+<p>Look at other features in the hex or surrounding hexes to determine what the sign is for.</p>
+
+<h4 id="structure">Structure</h4>
+
+<p>Use <a href="./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf">Filling in the Blanks</a> under 3. Structures on p. 19-45.</p>
+
+<p>Steps:</p>
+
+<ol>
+  <li>Roll a d10 for possible structures</li>
+  <li>Additional roles for more details on structure</li>
+  <li>Describe structure in hex notes and update label with structure type</li>
+</ol>
+
+<h4 id="geologic">Geologic</h4>
+
+<p>Use <a href="./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf">Filling in the Blanks</a> under 2. Geologic on p. 48-56.</p>
+
+<h2 id="6-determine-lair-location--occupants">6. Determine Lair Location &amp; Occupants</h2>
+
+<p>Use APPENDIX C: RANDOM MONSTER ENCOUNTERS tables for appropriate conditions and area of <a href="./Resources/Rules/Dungeon-Masters-Guide-1E.pdf">DMG</a> to determine occupants of lairs, e.g. for this map Temperate And Sub-Tropical Conditions in Uninhabited/Wilderness Areas on p. 184.</p>
+
+<ol>
+  <li>Roll d100 for pre-dominate terrain for each lair</li>
+  <li>In Worldographer, update label for each lair with creature type</li>
+  <li>Roll on sub tables, if necessary</li>
+</ol>
+
+<h3 id="generate-ruins">Generate ruins</h3>
+
+<p>Use Ruins Generator tables in <a href="https://www.drivethrurpg.com/en/product/124392/d30-sandbox-companion">D30 Sandbox Companion</a> on p. 21.</p>
+
+<p>d30: https://rolladie.net/roll-a-d30-die</p>
+
+<p>Steps:</p>
+
+<ol>
+  <li>Roll d30 on RG1 to determine type of ruins</li>
+  <li>Roll d30 on RG2 to determine character of ruin/decay &amp; degree</li>
+  <li>Describe ruins in hex notes</li>
+</ol>
+
+<h2 id="7-determine-settlements">7. Determine Settlements</h2>
+
+<p>Use <a href="./Resources/Rules/d30_Sandbox_Companion.pdf">D30 Sandbox Companion</a> IPD: INHABITATION BY POPULATION DENSITY table on p20 to determine density of population. Each hex has a 1 in 3 chance of having a settlement and the density will determine if there actually is a settlement.</p>
+
+<p>Density for this map are: Frontier</p>
+
+<p>Steps:</p>
+
+<ol>
+  <li>Open <a href="https://docs.google.com/spreadsheets/d/1C-7wzWaNHMVVr-sSvk1lJImEKx9R6gpx/edit?usp=sharing&amp;ouid=112939477498268066745&amp;rtpof=true&amp;sd=true">Hex Population Excel</a></li>
+  <li>Select <em>Subhex Population</em> tab</li>
+  <li>Set predominate terrain type in M2 from Atlas-level hex, e.g. Plains, &amp; population density, e.g. Frontier</li>
+  <li>Update the V4 cell to re-run the random number generators</li>
+  <li>Copy the randomly generated settlement &amp; settlement type numbers (S5:T35)</li>
+  <li>Select first cell under Settlement? Random (E5) then right-click on selection then select Past special-&gt;Values only</li>
+  <li>Using the figure for hex numbers 1-31 find the hex for each Subhex # with Settlement of Maybe &amp; add an icon, e.g. Building Cottage or Settlement City Ruined, with a label for the Type</li>
+</ol>
+
+<h3 id="generate-settlement-names">Generate Settlement Names</h3>
+
+<p>Use something like <a href="https://donjon.bin.sh/fantasy/name/#type=set;set=city">Don Jon’s Fantasy Name Generator</a></p>
+
+
+
+  <hr>
+  
+  <div class="rpgui-center">
+    <h1 style="font-size:150%">That's it, for now!</h1>
+    <p>Check out the <a href="/blog.html">Blog</a> for more posts!</p>
+    <br><br>
+    <a href="#main">- Back to Top -</a>
+    <br><br>
+    <img src="../../../images/skelly-rip.png" style="position:absolute; display:inline-block; width:70px; right:0px; bottom:0px">
+    <img src="../../../images/skelly-rip.png" style="position:absolute; display:inline-block; width:70px; left:0px; bottom:0px; transform: scaleX(-1);">
+  </div>
 </div>
         </div>
       </div>
