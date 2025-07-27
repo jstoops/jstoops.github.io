@@ -254,7 +254,7 @@ function generateLairs(noLairs, noHexes, displayElement) {
     hexTile = rollDice(noHexes);
     lairs = lairs + "Hex: " + hexTile + "\n";
   }
-  lairOoutpututput.value = lairs.slice(0, -1);
+  output.value = lairs.slice(0, -1);
 }
 
 const elevationChangeReasonRanges = [
