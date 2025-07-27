@@ -314,3 +314,27 @@ function elevationChangeArea(noSides, displayElement) {
   }
   output.value = "Unknown";
 }
+
+const resourceExceptionalValueRanges = [
+  { min: 1, max: 3, text: "25% more that base value" },
+  { min: 4, max: 5, text: "50% more that base value" },
+  { min: 6, max: 7, text: "75% more that base value" },
+  { min: 8, max: 8, text: "100% more that base value" }
+];
+
+function resourceExceptionalValue(noSides, displayElement) {
+  const output = document.getElementById(displayElement);
+  result = rollDice(noSides);
+  if (result < 20) {
+    output.value = "No, not exceptional";
+    return;
+  }
+  result = rollDice(8);
+  for (const range of resourceExceptionalValueRanges) {
+    if (result >= range.min && result <= range.max) {
+      output.value = range.text;
+      return;
+    }
+  }
+  output.value = "Unknown";
+}

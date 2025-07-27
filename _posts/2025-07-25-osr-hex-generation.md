@@ -285,9 +285,9 @@ For each feature generated determine the details for it using the Features secti
 
 #### Depressions
 
-Use [Filling in the Blanks](./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf) under 2.2. Change in Elevation on p. 13-14.
+Use [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) under 2.2. Change in Elevation on p. 13-14.
 
-Steps:
+Here's the steps for fleshing out the details of a depression:
 
 1. Why did the elevation change? <a onClick="elevationChangeReason(100, 'elevation-change-reason')">Roll a d100</a>
 
@@ -309,7 +309,7 @@ Steps:
    - There is a _1-4 in 6 chance_ that the change in elevation represents a differing terrain type than the surrounding environs.
    - This change in terrain will most often (1-4) be within one degree of the surrounding terrain, or (5-6) within two degrees.
    - If one degree of change then roll a d3 (or d6/2) 
-   - <input id="elevation-change-difference" placeholder="1d6x100" />
+   - <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" />
 
 5. Describe depression in hex notes and update label with depression type
 
@@ -343,52 +343,49 @@ _Degree of Change in Terrain Table_
 | :------: | :-------------------------------------------------------------------- |
 |   1-50  | **Within one degree.** The basic terrain type remains the same, with a slight change. For instance, farmland, grazing land, grasslands, shrublands and savannas are all flat, relatively treeless terrains that are within one degree of one another. Likewise, a hill could be barren, grassy, or forested and still be within one degree of the basic “hill” type. |
 |  51-85  | **Within two degrees.** An area of a grasslands hex could be hilly, or an area of a hilly hex could be mountainous, but a mountain still wouldn't be found in the middle of a flat plain. |
-|  86-95  | **Unusual.** This is an unusual feature that is non-magical in nature but rarely seen. Roll 1d100 below to determine the actual feature. If the existing terrain doesn't fit with the feature, roll again. |
+|  86-95  | **Unusual.** This is an unusual feature that is non-magical in nature but rarely seen. Roll 1d100 on the _Unusual Feature Terrain Table_ below to determine the actual feature. If the existing terrain doesn't fit with the feature, roll again. |
 |   100   | **Magical/magically created terrain.** This category includes things like fungal forests, fields of flowers that magically put those walking through them to sleep, areas where gravity is increased or decreased, etc. The terrain itself could have a magical effect — for instance, it could be a null-magic zone, where no magic functions — or it could be obviously magically created, such as an entire hex where the ground has been turned into bright green glass. Regardless, the terrain type here is both clearly out of place and clearly artificial/magical in nature. |
 
-_Unusal Feature Terrain Table_
+_Unusual Feature Terrain Table_
 
 | :------: | :-------------------------------------------------------------------- |
-|   1-10   | Glacier. A mass of densely packed,
-slowly moving snow. Those on the glacier
-have their movement reduced by 1/2,
-suffer the same risk of sun-blindness as
-on a salt flat, and have a 1 in 6 chance
-of encountering a hazard for each subhex
-they enter on the glacier (most likely a
-crevasse or a sinkhole).
-11-20. Hot springs. See the section on
-water features in Chapter Ten.
-21-30. Landlocked sand dunes. All that
-remains of an ancient, land-locked sea or
-ocean. Treat as desert.
-31-40. Mudflats. A stretch of barren clay
-that cracks when it dries. When wet, it
-becomes slick and difficult to traverse.
-Reduce movement by 1/2 when traveling
-through a wet mudflat.
-41-50. Other.
-51-60. Petrified forest. The remains of an
-ancient forest can be found here, the
-trees turned to stone. There’s only a 1 in
-6 chance the trees are actually standing,
-otherwise they are lying on the ground.
-61-70. Rock Formations. Unusual rock
-formations dot the landscape: towers
-of stone such as the Devil’s Tower in
-Wyoming or the Stone Forest in China,
-or unusual boulder deposits (see Chapter
-Two for more information).
+|   1-10   | **Glacier.** A mass of densely packed, slowly moving snow. Those on the glacier have their movement reduced by 1/2, suffer the same risk of sun-blindness as on a salt flat, and have a 1 in 6 chance of encountering a hazard for each subhex they enter on the glacier (most likely a crevasse or a sinkhole). |
+|  11-20   | **Hot springs.** The water is heated by geothermal means and is often (1-4 in 6) accompanied by a strong smell of sulfur. It will rarely (1 in 6) be unbearably hot, inflicting (1-3) 1, (4-5) 1d4, or (6) 1d6 points of damage for every round someone not immune to fire damage is within. If it is hot enough to inflict damage there's a 1-2 in 6 chance it is actually a geyser (see _Geyser_ below). |
+|  21-30   | **Landlocked sand dunes.** All that remains of an ancient, land-locked sea or ocean. Treat as desert. |
+|  31-40   | **Mudflats.** A stretch of barren clay that cracks when it dries. When wet, it becomes slick and difficult to traverse. Reduce movement by 1/2 when traveling through a wet mudflat.
+|  41-50   | **Other.** |
+|  51-60   | **Petrified forest.** The remains of an ancient forest can be found here, the trees turned to stone. There's only a 1 in 6 chance the trees are actually standing, otherwise they are lying on the ground.
+|  61-70   | **Rock Formations.** Unusual rock formations dot the landscape: towers of stone such as the Devil's Tower in Wyoming or the Stone Forest in China, or unusual boulder deposits. See the **Geologic** section. |
+
+_Geyser_
+
+- There will be (1-3) one geyser, (4-5) 2d4, or (6) 3d8 spread throughout the subhex, with an additional 1 in 6 chance this feature occurs over 1d20 subhexes.
+- Geysers are pools of extremely hot (1-4) water or (5-6) mud.
+- There's only a 1 in 6 chance the pool will be cool enough (relatively) that individuals can enter it without suffering damage; otherwise someone not resistant to fire will suffer 1d6 points of damage for every round they're within the pool.
+- Geysers erupt every (1) 1d6 hours, (2-3) 1d8 days, (4-5) 1d4 weeks, (6) 1d4 months.
+- If this is generated as a triggered hazard, assume they erupt upon the adventurers first entering the subhex, with subsequent eruptions occurring on a regular basis thereafter.
+- Boiling water (or mud) is spread over a radius of (1-3) 1d20 yards, (4-5) 5d20 yards, or (6) 10d100 yards (reduce ranges for mud eruptions by half), inflicting (1-3) 1d6, (4-5) 2d6, or (6) 3d6 points of damage.
+- If it is a mud eruption, it inflicts half the initial damage in the round after the eruption.
+- A save versus breath reduces the damage by half.
+- A geyser will erupt for (1-3) 1d6 rounds, (4-5) 1d10 minutes, or (6)1d8 hours.
+
+Source: [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks)
 
 #### Resources
 
 PCs could mine the minerals, harvest the vegetables, hunt the game, etc. to create XP and income.
 
-Use [Filling in the Blanks](./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf) under 4. Resources on p. 48-56.
+Use [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) under 4. Resources on p. 48-56.
 
-Steps:
+Here's the steps for fleshing out the details of a resource:
 
-1. Exceptional resource? 1d20
+1. Exceptional resource? <a onClick="resourceExceptionalValue(20, 'resource-exceptional-value')">Roll a d20</a>
+
+   - There's a 1 in 20 chance that the resource is exceptional. If it is, roll a d8.
+   - It's worth 25% more on a 1-3, 50% more on a 4-5, 75% more on a 6-7, or 100% more on an 8 than the base value.
+   - It's up to you why this resource is of exceptional value, such as purity, appearance, or other properties.
+   - <input id="resource-exceptional-value" placeholder="Exceptional resource?" />
+
 2. Category of resource? 1d20
 3. Additional roles for more details on resource
 4. Describe resource in hex notes and update label with resource name
@@ -410,7 +407,7 @@ Steps:
 #### Geologic
 
 Use [Filling in the Blanks](./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf) under 2. Geologic on p. 48-56.
-
+Rock Formations p14
 ## 6. Determine Lair Location & Occupants
 
 Use APPENDIX C: RANDOM MONSTER ENCOUNTERS tables for appropriate conditions and area of [DMG](./Resources/Rules/Dungeon-Masters-Guide-1E.pdf) to determine occupants of lairs, e.g. for this map Temperate And Sub-Tropical Conditions in Uninhabited/Wilderness Areas on p. 184.

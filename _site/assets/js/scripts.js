@@ -254,7 +254,7 @@ function generateLairs(noLairs, noHexes, displayElement) {
     hexTile = rollDice(noHexes);
     lairs = lairs + "Hex: " + hexTile + "\n";
   }
-  lairOoutpututput.value = lairs.slice(0, -1);
+  output.value = lairs.slice(0, -1);
 }
 
 const elevationChangeReasonRanges = [
@@ -309,6 +309,30 @@ function elevationChangeArea(noSides, displayElement) {
   for (const range of elevationChangeAreaRanges) {
     if (result >= range.min && result <= range.max) {
       output.value = range.text.replace("AREA", rollMultipleDice(range.noDice, noSides)+range.modifier);
+      return;
+    }
+  }
+  output.value = "Unknown";
+}
+
+const resourceExceptionalValueRanges = [
+  { min: 1, max: 3, text: "25% more that base value" },
+  { min: 4, max: 5, text: "50% more that base value" },
+  { min: 6, max: 7, text: "75% more that base value" },
+  { min: 8, max: 8, text: "100% more that base value" }
+];
+
+function resourceExceptionalValue(noSides, displayElement) {
+  const output = document.getElementById(displayElement);
+  result = rollDice(noSides);
+  if (result < 20) {
+    output.value = "No, not exceptional";
+    return;
+  }
+  result = rollDice(8);
+  for (const range of resourceExceptionalValueRanges) {
+    if (result >= range.min && result <= range.max) {
+      output.value = range.text;
       return;
     }
   }
