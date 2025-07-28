@@ -9,25 +9,27 @@ Use Table 1.1 – Feature Types on page 7 and Figure One - Placing Lairs Feature
 
 Here's the steps to generate feature and lairs:
 
-1. <a onClick="generateFeatures(6, 20, 100, 'feature-rolls', 'feature-results')">Roll a d20 and a d100 six times</a> for the features and their location
+1. <a onClick="generateFeatures(6,'feature-rolls', 'feature-results'); document.getElementById('no-features').value=6;">Roll a d20 and a d100 six times</a> for the features and their location
 2. Using the figure for hex numbers 1-31 find the hex for each Location & add an icon with text representing the feature
-3. <a onClick="generateLairs(5, 100, 'lair-results')">Roll a d100 5 times</a> for the lairs
+3. <a onClick="generateLairs(5, 'lair-results'); document.getElementById('no-lairs').value=5;">Roll a d100 5 times</a> for the lairs
 4. Using the figure for hex numbers 1-31 find the hex for each Location & add an icon a lair
 
-<div class="roll-results" style="float:left; width: 45%; padding-right: 10px;">
-  <h2>Features</h2>
-  <label>Rolls:</label> <input id="feature-rolls" />
-  <label>Features:</label> <textarea id="feature-results" rows="6"></textarea>
-  <button onClick="generateFeatures(6, 20, 100, 'feature-rolls', 'feature-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+<div class="roll-results rpgui-container framed-golden-2" style="float:left; width: 45%; padding-right: 10px; position:relative; height:auto; display:inline-block">
+   <h2>Features</h2>
+   <label>Number of Features:</label> <input id="no-features" value="6" />
+   <label>Rolls:</label> <input id="feature-rolls" />
+   <label>Features:</label> <textarea id="feature-results" rows="6"></textarea>
+   <button onClick="generateFeatures(document.getElementById('no-features').value, 'feature-rolls', 'feature-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div class="roll-results" style="float:right; width: 45%;">
-  <h2>Lairs</h2>
-  <label>Lairs:</label> <textarea id="lair-results" rows="5"></textarea>
-  <button onClick="generateLairs(5, 100, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 45%; position:relative; height:auto; display:inline-block">
+   <h2>Lairs</h2>
+   <label>Number of Lairs:</label> <input id="no-lairs" value="5" />
+   <label>Lairs:</label> <textarea id="lair-results" rows="5"></textarea>
+   <button onClick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;"></div>
+<div style="clear: both;" />
 
 **Table 1.1 – Feature Types**
 

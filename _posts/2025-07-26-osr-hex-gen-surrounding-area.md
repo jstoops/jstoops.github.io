@@ -72,13 +72,14 @@ The tool below allows you to select the starting tile terrain type, "Plains" in 
 
 Here's the steps to generate terrain:
 
-1. <a onClick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.
+1. <a onClick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.
 2. Define the terrain type for each roll using the table below by matching the result under your starting tile's terrain column, i.e. Plains, with the terrain type, e.g. if you rolled a 12 it is Scrub
 3. Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
    - Depressions & Ponds: retains prior terrain type and apply special marking indicating it's a depression or pond
    - 1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)
 
-<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 57%; padding-left: 5px; position:relative; height:auto; display:inline-block">
+   <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
@@ -91,10 +92,12 @@ Here's the steps to generate terrain:
    </select>
   <label>Rolls:</label> <input id="atlas-terrain-rolls" />
   <label>Terrain Types:</label> <textarea id="atlas-terrain-types" rows="6"></textarea>
-  <button onClick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+  <button onClick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
 <img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" />
+
+<div style="clear: both;" />
 
 |                 | Plains | Scrub | Forest | Rough | Desert | Hills | Mountains | Marsh |
 | :-------------- | :---: | :---: | :----: | :---: | :----: | :---: | :-------: | :---: |
@@ -158,7 +161,7 @@ This follows the same process as generatign terrain at the Atlas-level except it
 
 Here's the steps to generate the terrain for the times surrounding your starting settlement:
 
-1. <a onClick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.
+1. <a onClick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.
 2. Check first few hexes have some additional plains, e.g. low numbers, so it makes sence for a settlement like this and re-roll, if necessary, until terrain distribution feels right for what you have in mind for this area
 3. Define the terrain type for each roll using the table below by matching the result under your starting tile's terrain column, i.e. Plains
 4. Apply the generated terrains to all the tiles representing the higher level Atlas tile radiating out from the starting hex, e.g. 40.25
@@ -172,7 +175,8 @@ Here's the steps to generate the terrain for the times surrounding your starting
    - Depressions & Ponds: retains prior terrain type and apply special marking indicating it's a depression or pond
    - 1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)
 
-<div class="roll-results">
+<div class="roll-results rpgui-container framed-golden-2" style="position:relative; width:100%; height:auto; display:inline-block">
+   <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
@@ -183,7 +187,10 @@ Here's the steps to generate the terrain for the times surrounding your starting
       <option value="Mountains">Mountains</option>
       <option value="Marsh">Marsh</option>
    </select>
-  <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="3"></textarea>
-  <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
-  <button onClick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+   <label>Number of Hexes:</label> <input id="sub-terrain-no-hexes" value="31" />
+   <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="1"></textarea>
+   <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="6"></textarea>
+   <button onClick="generateTerrain(document.getElementById('sub-terrain-type').value, document.getElementById('sub-terrain-no-hexes').value, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
+
+<div style="clear: both;" />

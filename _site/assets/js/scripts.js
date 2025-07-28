@@ -201,9 +201,10 @@ function terrainLookup(terrainRoll, terrainType) {
   }
 }
 
-function generateTerrain(terrainType, noDice, noSides, rollDisplayElement, terrainDisplayElement) {
+function generateTerrain(terrainType, noDice, rollDisplayElement, terrainDisplayElement) {
   const rollResultOutput = document.getElementById(rollDisplayElement);
   const terrainOutput = document.getElementById(terrainDisplayElement);
+  const noSides = 20;
   rollResults = "";
   terrain = "";
   for (i=0; i < noDice; i++) {
@@ -228,9 +229,11 @@ const featureRanges = [
   { min: 20, max: 20, text: "Magic" }
 ];
 
-function generateFeatures(noFeatures, noSides, noHexes, rollDisplayElement, featureDisplayElement) {
+function generateFeatures(noFeatures, rollDisplayElement, featureDisplayElement) {
   const rollResultOutput = document.getElementById(rollDisplayElement);
   const featureOutput = document.getElementById(featureDisplayElement);
+  const noSides = 20;
+  const noHexes = 100;
   rollResults = "";
   features = "";
   for (i=0; i < noFeatures; i++) {
@@ -247,8 +250,9 @@ function generateFeatures(noFeatures, noSides, noHexes, rollDisplayElement, feat
   featureOutput.value = features.slice(0, -1);
 }
 
-function generateLairs(noLairs, noHexes, displayElement) {
+function generateLairs(noLairs, displayElement) {
   const output = document.getElementById(displayElement);
+  const noHexes = 100;
   lairs = "";
   for (i=0; i < noLairs; i++) {
     hexTile = rollDice(noHexes);

@@ -166,7 +166,7 @@
 <p>Here’s the steps to generate terrain:</p>
 
 <ol>
-  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
+  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
   <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
   <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
     <ul>
@@ -176,7 +176,8 @@
   </li>
 </ol>
 
-<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 57%; padding-left: 5px; position:relative; height:auto; display:inline-block">
+   <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
@@ -189,10 +190,12 @@
    </select>
   <label>Rolls:</label> <input id="atlas-terrain-rolls" />
   <label>Terrain Types:</label> <textarea id="atlas-terrain-types" rows="6"></textarea>
-  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
 <p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
+
+<div style="clear: both;" />
 
 <table>
   <thead>
@@ -378,7 +381,7 @@
 <p>Here’s the steps to generate the terrain for the times surrounding your starting settlement:</p>
 
 <ol>
-  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
+  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
   <li>Check first few hexes have some additional plains, e.g. low numbers, so it makes sence for a settlement like this and re-roll, if necessary, until terrain distribution feels right for what you have in mind for this area</li>
   <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains</li>
   <li>Apply the generated terrains to all the tiles representing the higher level Atlas tile radiating out from the starting hex, e.g. 40.25
@@ -401,7 +404,8 @@
   </li>
 </ol>
 
-<div class="roll-results">
+<div class="roll-results rpgui-container framed-golden-2" style="position:relative; width:100%; height:auto; display:inline-block">
+   <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
@@ -412,10 +416,14 @@
       <option value="Mountains">Mountains</option>
       <option value="Marsh">Marsh</option>
    </select>
-  <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="3"></textarea>
-  <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
-  <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+   <label>Number of Hexes:</label> <input id="sub-terrain-no-hexes" value="31" />
+   <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="1"></textarea>
+   <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="6"></textarea>
+   <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, document.getElementById('sub-terrain-no-hexes').value, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
+
+<div style="clear: both;" />
+
 
 
   <hr>

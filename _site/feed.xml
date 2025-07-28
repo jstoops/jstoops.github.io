@@ -1,30 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-28T10:05:50-10:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-28T10:47:25-10:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
 
 <p>Use Table 1.1 – Feature Types on page 7 and Figure One - Placing Lairs Features on page 5 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> to add additional, interesting features to the core hex. 1d6 features and 1d6 lairs in each 6-mile hex seems too dense, therefore, instead of every 6-mile hex up it a level so do every 30-mile hex has 6 features and 5 lairs, i.e. the entire large hex at the Sub-level. Feel free to adjust these numbers or roll to randomize the number per 30-mile hex.</p>
 
 <p>Here’s the steps to generate feature and lairs:</p>
 
 <ol>
-  <li><a onclick="generateFeatures(6, 20, 100, 'feature-rolls', 'feature-results')">Roll a d20 and a d100 six times</a> for the features and their location</li>
+  <li><a onclick="generateFeatures(6,'feature-rolls', 'feature-results'); document.getElementById('no-features').value=6;">Roll a d20 and a d100 six times</a> for the features and their location</li>
   <li>Using the figure for hex numbers 1-31 find the hex for each Location &amp; add an icon with text representing the feature</li>
-  <li><a onclick="generateLairs(5, 100, 'lair-results')">Roll a d100 5 times</a> for the lairs</li>
+  <li><a onclick="generateLairs(5, 'lair-results'); document.getElementById('no-lairs').value=5;">Roll a d100 5 times</a> for the lairs</li>
   <li>Using the figure for hex numbers 1-31 find the hex for each Location &amp; add an icon a lair</li>
 </ol>
 
-<div class="roll-results" style="float:left; width: 45%; padding-right: 10px;">
-  <h2>Features</h2>
-  <label>Rolls:</label> <input id="feature-rolls" />
-  <label>Features:</label> <textarea id="feature-results" rows="6"></textarea>
-  <button onclick="generateFeatures(6, 20, 100, 'feature-rolls', 'feature-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+<div class="roll-results rpgui-container framed-golden-2" style="float:left; width: 45%; padding-right: 10px; position:relative; height:auto; display:inline-block">
+   <h2>Features</h2>
+   <label>Number of Features:</label> <input id="no-features" value="6" />
+   <label>Rolls:</label> <input id="feature-rolls" />
+   <label>Features:</label> <textarea id="feature-results" rows="6"></textarea>
+   <button onclick="generateFeatures(document.getElementById('no-features').value, 'feature-rolls', 'feature-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div class="roll-results" style="float:right; width: 45%;">
-  <h2>Lairs</h2>
-  <label>Lairs:</label> <textarea id="lair-results" rows="5"></textarea>
-  <button onclick="generateLairs(5, 100, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 45%; position:relative; height:auto; display:inline-block">
+   <h2>Lairs</h2>
+   <label>Number of Lairs:</label> <input id="no-lairs" value="5" />
+   <label>Lairs:</label> <textarea id="lair-results" rows="5"></textarea>
+   <button onclick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;"></div>
+<div style="clear: both;" />
 
 <p><strong>Table 1.1 – Feature Types</strong></p>
 
@@ -466,7 +468,7 @@ Rock Formations p14</p>
 <p>Here’s the steps to generate terrain:</p>
 
 <ol>
-  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
+  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
   <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
   <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
     <ul>
@@ -476,7 +478,8 @@ Rock Formations p14</p>
   </li>
 </ol>
 
-<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 57%; padding-left: 5px; position:relative; height:auto; display:inline-block">
+   <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
@@ -489,10 +492,12 @@ Rock Formations p14</p>
    </select>
   <label>Rolls:</label> <input id="atlas-terrain-rolls" />
   <label>Terrain Types:</label> <textarea id="atlas-terrain-types" rows="6"></textarea>
-  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
 <p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
+
+<div style="clear: both;" />
 
 <table>
   <thead>
@@ -678,7 +683,7 @@ Rock Formations p14</p>
 <p>Here’s the steps to generate the terrain for the times surrounding your starting settlement:</p>
 
 <ol>
-  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
+  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
   <li>Check first few hexes have some additional plains, e.g. low numbers, so it makes sence for a settlement like this and re-roll, if necessary, until terrain distribution feels right for what you have in mind for this area</li>
   <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains</li>
   <li>Apply the generated terrains to all the tiles representing the higher level Atlas tile radiating out from the starting hex, e.g. 40.25
@@ -701,7 +706,8 @@ Rock Formations p14</p>
   </li>
 </ol>
 
-<div class="roll-results">
+<div class="roll-results rpgui-container framed-golden-2" style="position:relative; width:100%; height:auto; display:inline-block">
+   <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
       <option value="Plains" selected="">Plains</option>
@@ -712,10 +718,13 @@ Rock Formations p14</p>
       <option value="Mountains">Mountains</option>
       <option value="Marsh">Marsh</option>
    </select>
-  <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="3"></textarea>
-  <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
-  <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
-</div>]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[Once you’ve got your concept and pitch figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.]]></summary></entry><entry><title type="html">Hex Gen - Gygax Challenge</title><link href="http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge.html" rel="alternate" type="text/html" title="Hex Gen - Gygax Challenge" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge</id><content type="html" xml:base="http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
+   <label>Number of Hexes:</label> <input id="sub-terrain-no-hexes" value="31" />
+   <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="1"></textarea>
+   <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="6"></textarea>
+   <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, document.getElementById('sub-terrain-no-hexes').value, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div style="clear: both;" />]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[Once you’ve got your concept and pitch figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.]]></summary></entry><entry><title type="html">Hex Gen - Gygax Challenge</title><link href="http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge.html" rel="alternate" type="text/html" title="Hex Gen - Gygax Challenge" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge</id><content type="html" xml:base="http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
 
 <p>This approach can be used for any OSR (Old School Renaissance or Old School Revival) game like the original AD&amp;D, <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics (DCC)</a>, <a href="https://www.thearcanelibrary.com/collections/shadowdark-rpg">Shadowdark</a>, <a href="https://www.drivethrurpg.com/en/product/396879/deathbringer-rpg">Deathbringer</a>, <a href="https://jasontocci.itch.io/grave">Grave</a>, <a href="https://level2janitor.itch.io/iron-halberd">Iron Halberd</a>, <a href="https://questingbeast.itch.io/knave">Knave</a>, <a href="https://www.basicfantasy.org/">Basic Fantasy</a>, and many others based on the original DnD rules.</p>
 
