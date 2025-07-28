@@ -44,6 +44,10 @@ thead th, tbody tr:nth-child(even) {
     background-origin: padding-box;
 }
 
+td:first-child {
+  font-weight: bold;
+}
+
 .inner {
     background: #444;
     padding-left: 20px;
@@ -75,7 +79,7 @@ thead th, tbody tr:nth-child(even) {
 }
 
 #blog-post h2 a {
-    font-size: 150%;
+    font-size: 100%;
 }
 
 #blog-posts h3, #blog-posts h4 {
@@ -101,4 +105,8 @@ thead th, tbody tr:nth-child(even) {
 
 .rpgui-content .roll-results textarea {
   height: fit-content;
+}
+
+input.my-slider {
+    cursor: url(../img/cursor/point.png) 10 0,auto;
 }

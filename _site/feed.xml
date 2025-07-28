@@ -1,403 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-27T18:26:44-10:00</updated><id>/feed.xml</id><entry><title type="html">OSR Hex Generation</title><link href="/2025/07/25/osr-hex-generation.html" rel="alternate" type="text/html" title="OSR Hex Generation" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>/2025/07/25/osr-hex-generation</id><content type="html" xml:base="/2025/07/25/osr-hex-generation.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
-
-<p>This approach can be used for any OSR (Old School Renaissance or Old School Revival) game like the original AD&amp;D, <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics (DCC)</a>, <a href="https://www.thearcanelibrary.com/collections/shadowdark-rpg">Shadowdark</a>, <a href="https://www.drivethrurpg.com/en/product/396879/deathbringer-rpg">Deathbringer</a>, <a href="https://jasontocci.itch.io/grave">Grave</a>, <a href="https://level2janitor.itch.io/iron-halberd">Iron Halberd</a>, <a href="https://questingbeast.itch.io/knave">Knave</a>, <a href="https://www.basicfantasy.org/">Basic Fantasy</a>, and many others based on the original DnD rules.</p>
-
-<p>The main inspiration for this “world building” process comes from <a href="https://archive.org/details/the-gygax-75-challenge-ttrpg-worldbuilding-resource">The Gygax 75 Challenge</a> that suggests the following steps:</p>
-
-<ol>
-  <li>The Concept: Pitch -&gt; Sources of Inspiration</li>
-  <li>Surrounding Area</li>
-  <li>The Dungeon</li>
-  <li>Town Features</li>
-  <li>The Larger World</li>
-</ol>
-
-<h1 id="week-1-the-concept-pitch-and-sources-of-inspiration">Week 1: The Concept: Pitch and Sources of Inspiration</h1>
-
-<p>So to get started, you need to articulate the big ideas and gather sources.</p>
-
-<blockquote>
-  <p>“Step 1 is something you do in your head. Now, fantasy/swords &amp; sorcery games need not have any fixed basis for the assumptions made by its referee (my own doesn’t) except those which embrace the whole of fantasy. This sort of campaign can mix any and all of the various bases which will be mentioned below - and then some. […]
-Settings based upon limits (if one can speak of fantasy limits) can be very interesting in themselves providing the scope of the setting will allow the players relative free-reign to their imaginations.” – E.G.G.</p>
-</blockquote>
-
-<h2 id="pitch">Pitch</h2>
-
-<p>In the Gygax 75 Challenge is suggested that you write down 3-7 well-crafted bullet points that will both communicate and “sell” the world to your players.</p>
-
-<p>For example:</p>
-
-<ul>
-  <li><em>The Forsaken Frontier</em> is on the edge of civilization where settlers seek their fortune and cling to the protection of local nobles and warlords.</li>
-  <li><em>The Wilds.</em> Not far beyond though, the Frontier is wild where millennia of forgotten civilizations lie in ruins crawling with monsters, evil sorcerers, distant kingdoms of ancient races, and in the unexplored depths an otherworldly evil.</li>
-  <li><em>Player characters are human.</em> Creatures that are either more or less than human come from interactions between gods and mortals or from a more ancient time. These creatures are feared and mistrusted, even if some have become human (e.g. the centaurs).</li>
-  <li><em>Magic is unknown, dangerous, and inhuman.</em> Even the best wizards occasionally fail to properly harness a spell, with unpredictable results. Low-level wizards are powerful. High-level wizards fear for their souls. Continual use of magic results in…changes. Exposure to demons, radiation from other planes, elemental energies in toxic quantities, and the servants of Chaos all affect a wizard over the course of his career. Magic is unpredictable and spells can fail, or may misfire, and the magic user may suffer corruption.</li>
-</ul>
-
-<h2 id="sources-of-inspiration">Sources of Inspiration</h2>
-
-<ul>
-  <li>The Keep on the Borderlands and the Amber Castle, book series like <a href="https://dungeonsanddragonsfan.com/legend-of-drizzt-books-in-order/">The Legend of Drizzt by R.A. Salvatore</a> and <a href="https://en.wikipedia.org/wiki/The_Black_Company">The Black Company by Glen Cook</a>, and the classic AD&amp;D 1e Dungeon Masters Guide.</li>
-</ul>
-
-<h1 id="tools">Tools</h1>
-
-<p>So, how do you go about creating your own hex map from scratch using the random tables in the AD&amp;D 1e Dungeon Masters Guide (DMG) and other resources?</p>
-
-<p>I’m using the tool <a href="https://worldographer.com/">Worldgrapher</a> because the <a href="https://store.inkwellideas.com/products/bunlde-hexographer-cityographer-and-dungeonographer-pro-versions">pro version</a> allows multiple map levels so you can start with a high-level world map and zoom into continent, kingdom, and province detail maps which works well with the DMG and can be fully configured and customized to your preferred number of hexes within the previous levels hex. I’ve also used the free version, <a href="https://www.hexographer.com/free-version/">Hexographer</a>, for years to create hex maps and will work fine for this you just have to create a separate map for each level so the steps will be slightly different.</p>
-
-<p><a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> and <a href="https://www.drivethrurpg.com/en/product/124392/d30-sandbox-companion">D30 Sandbox Companion</a> have useful rules for generating specific aspects of your world too that are useful.</p>
-
-<h1 id="week-2-the-surrounding-area">Week 2: The Surrounding Area</h1>
-
-<p>Once you’ve got your pitch you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.</p>
-
-<blockquote>
-  <p>”[…] sitting down with a large piece of hex ruled paper and drawing a large scale map. A map with a scale of 1 hex = 1 mile will be about right for player operations such as exploring, camping, adventuring, and eventually building their strongholds. Even such small things as a witch’s hut and side entrances to the dungeon can be shown on the map. The central features of the map must be the major town and the dungeon entrance.” – E.G.G.</p>
-</blockquote>
-
-<h2 id="set-up-worldographer">Set up Worldographer</h2>
-
-<p>Here’s the steps to setup Worldgrapher for a 15x15 hex map at the WORLD level:</p>
-
-<ol>
-  <li>Open Worldographer</li>
-  <li>Select File-&gt;New World/Kingdom Map</li>
-  <li>
-    <p>Settings:</p>
-
-    <ul>
-      <li><em>Hexes Wide:</em> 15</li>
-      <li><em>Hexes High:</em> 15</li>
-      <li><em>Initial View Level:</em> WORLD</li>
-      <li>Select <em>All one terrain</em> and set to: Blank</li>
-    </ul>
-  </li>
-</ol>
-
-<p><img src="../../../images/Worldographer-New-World-Map.jpg" alt="New Worldographer 15x15 hex map settings" /></p>
-
-<ol>
-  <li>Click <strong>Generate Map</strong></li>
-  <li>Add label at World Level with the text “30mi/hex” by selecting Label-&gt;New Text Label and clicking on the the map to place it. Make sure only World is checked else it’ll appear on every level, not just the World level.</li>
-</ol>
-
-<p><img src="../../../images/Worldographer-World-Map-Scale-Label-Settings.jpg" alt="World map label settings" /><br />
-<img src="../../../images/Worldographer-World-Map-Scale-Label.jpg" alt="Example World map label" /></p>
-
-<ol>
-  <li>
-    <p>Show hex numbers &amp; reduce size:</p>
-
-    <ul>
-      <li>Check <em>Numbers</em> in bottom toolbar <img src="../../../images/Worldographer-Show-Hex-Numbers.jpg" alt="Show hex numbers and configure" /></li>
-      <li>Click the cog icon to the right of Numbers to Configure Tile Numbers</li>
-      <li>Make a lighter <em>Color</em> (e.g. #4d4d4d)</li>
-      <li>Set <em>Size</em> to 12</li>
-      <li>Set <em>Pre-Pad</em> to 10s digit</li>
-    </ul>
-  </li>
-</ol>
-
-<p><img src="../../../images/Worldographer-Configure-Tile-Numbers.jpg" alt="Show hex numbers and configure" /></p>
-
-<h2 id="select-center-atlas-level-hex-terrain">Select Center Atlas-level Hex Terrain</h2>
-
-<p>Note: Atlas-level = WORLD level in Worldographer</p>
-
-<p>Here’s the steps to set the starting location on the World map (known as Atlas-level map in AD&amp;D) for your <strong>One large settlement</strong> (define large however you like):</p>
-
-<ol>
-  <li>Select Terrain-&gt;Farmland (aka plains in DMG) &amp; click on starting hex, e.g. 08.05, where the campaign will begin</li>
-</ol>
-
-<p><img src="../../../images/Worldographer-Terrain-Farmland-Plains.jpg" alt="Terrain for plains" /></p>
-
-<ol>
-  <li>Select Feature-&gt;Building Clanmoot icon (if you right-click on the icon or terrain you can add it to your favorites so easy to find again)</li>
-  <li>Enter label, e.g. Village of Hommlet</li>
-  <li>
-    <p>Settings:</p>
-
-    <ul>
-      <li>Check <em>Override color</em> and set to appropriate color e.g. Black</li>
-      <li>Check <em>Override Default Scale</em> and set to appropriate scale, e.g. 75</li>
-      <li>Check <em>Scale height independently</em> and set to appropriate scale, e.g. 75</li>
-      <li>Set <em>Label Style</em> to City or Village</li>
-      <li>Make sure World, Continent, Kingdom and Province is checked so feature icon and label appears on every level of the map</li>
-    </ul>
-  </li>
-</ol>
-
-<p><img src="../../../images/Worldographer-Center-Map-Village-Label-Settings.jpg" alt="Starting location feature icon and label settings" /></p>
-
-<ol>
-  <li>Click in starting hex to place feature icon &amp; label for starting settlement, e.g. 08.05</li>
-</ol>
-
-<p><img src="../../../images/Worldographer-Center-Map-Village-Feature-Icon-Label.jpg" alt="Starting location feature icon and label" /></p>
-
-<h2 id="generate-surroundings-atlas-level-hex-terrain">Generate Surroundings Atlas-level Hex Terrain</h2>
-
-<p>Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that’s just 6 tiles.</p>
-
-<p>The tool below allows you to select the starting tile terrain type, “Plains” in this caase, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.</p>
-
-<p>Here’s the steps to generate terrain:</p>
-
-<ol>
-  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
-  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
-  <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
-    <ul>
-      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
-      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)</li>
-    </ul>
-  </li>
-</ol>
-
-<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
-   <label>Starting Tile:</label>
-   <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
-      <option value="Plains" selected="">Plains</option>
-      <option value="Scrub">Scrub</option>
-      <option value="Forest">Forest</option>
-      <option value="Desert">Desert</option>
-      <option value="Hills">Hills</option>
-      <option value="Mountains">Mountains</option>
-      <option value="Marsh">Marsh</option>
-   </select>
-  <label>Rolls:</label> <input id="atlas-terrain-rolls" />
-  <label>Terrain Types:</label> <textarea id="atlas-terrain-types" rows="6"></textarea>
-  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
-</div>
-
-<p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left"> </th>
-      <th style="text-align: center">Plains</th>
-      <th style="text-align: center">Scrub</th>
-      <th style="text-align: center">Forest</th>
-      <th style="text-align: center">Rough</th>
-      <th style="text-align: center">Desert</th>
-      <th style="text-align: center">Hills</th>
-      <th style="text-align: center">Mountains</th>
-      <th style="text-align: center">Marsh</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Plains</td>
-      <td style="text-align: center">1-11</td>
-      <td style="text-align: center">1-3</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">1-2</td>
-      <td style="text-align: center">1-3</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">1-2</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Scrub</td>
-      <td style="text-align: center">12</td>
-      <td style="text-align: center">4-11</td>
-      <td style="text-align: center">2-4</td>
-      <td style="text-align: center">3-4</td>
-      <td style="text-align: center">4-5</td>
-      <td style="text-align: center">2-3</td>
-      <td style="text-align: center">2</td>
-      <td style="text-align: center">3-4</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Forest*</td>
-      <td style="text-align: center">13</td>
-      <td style="text-align: center">12-13</td>
-      <td style="text-align: center">12-14</td>
-      <td style="text-align: center">5</td>
-      <td style="text-align: center">N/A</td>
-      <td style="text-align: center">4-5</td>
-      <td style="text-align: center">3</td>
-      <td style="text-align: center">5-6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Rough</td>
-      <td style="text-align: center">14</td>
-      <td style="text-align: center">14</td>
-      <td style="text-align: center">15</td>
-      <td style="text-align: center">6-8</td>
-      <td style="text-align: center">6-8</td>
-      <td style="text-align: center">6-7</td>
-      <td style="text-align: center">4-5</td>
-      <td style="text-align: center">7</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Desert</td>
-      <td style="text-align: center">15</td>
-      <td style="text-align: center">15</td>
-      <td style="text-align: center">N/A</td>
-      <td style="text-align: center">9-10</td>
-      <td style="text-align: center">9-14</td>
-      <td style="text-align: center">8</td>
-      <td style="text-align: center">6</td>
-      <td style="text-align: center">N/A</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Hills**</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">11-15</td>
-      <td style="text-align: center">15</td>
-      <td style="text-align: center">9-14</td>
-      <td style="text-align: center">7-10</td>
-      <td style="text-align: center">8</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Mountains***</td>
-      <td style="text-align: center">17</td>
-      <td style="text-align: center">17</td>
-      <td style="text-align: center">17</td>
-      <td style="text-align: center">16-17</td>
-      <td style="text-align: center">16-17</td>
-      <td style="text-align: center">15-16</td>
-      <td style="text-align: center">11-18</td>
-      <td style="text-align: center">N/A</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Marsh</td>
-      <td style="text-align: center">18</td>
-      <td style="text-align: center">18</td>
-      <td style="text-align: center">18</td>
-      <td style="text-align: center">18</td>
-      <td style="text-align: center">18</td>
-      <td style="text-align: center">17</td>
-      <td style="text-align: center">N/A</td>
-      <td style="text-align: center">9-15</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Pond</td>
-      <td style="text-align: center">19</td>
-      <td style="text-align: center">19</td>
-      <td style="text-align: center">19</td>
-      <td style="text-align: center">19</td>
-      <td style="text-align: center">19</td>
-      <td style="text-align: center">18-19</td>
-      <td style="text-align: center">19</td>
-      <td style="text-align: center">16-19</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Depression</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">20</td>
-    </tr>
-  </tbody>
-</table>
-
-<pre>
-*   1 in 10 also includes <b>hills</b>
-    aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
-**  1 in 10 also includes <b>forest</b>
-    aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
-*** 1 in 20 have a <b>pass</b> which leads through the range
-    aka Shapes-&gt;Preset: Trail-&gt;Curve, reduce Width, e.g. 5 click
-    points through mountain to represent pass.
-</pre>
-
-<p>Terrain Guide:</p>
-
-<ul>
-  <li><strong>Plain:</strong> tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. <em>Farmland</em> in Worldographer</li>
-  <li><strong>Scrub:</strong> brush, veldt, bush, thickets, brackens e.g. <em>Grassland</em> in Worldographer</li>
-  <li><strong>Forest:</strong> woods, jungle, groves and copses (light forest) e.g. <em>Forest Decid.</em>, <em>Forest Evrgr.</em>, etc. in Worldographer</li>
-  <li><strong>Rough:</strong> badlands e.g. <em>Other Badland</em> in Worldographer</li>
-  <li><strong>Desert:</strong> barrens, waste, flat, snowfield e.g. <em>Desert Sandy</em> in Worldographer</li>
-  <li><strong>Hills:</strong> ridges, bluffs, dunes e.g. <em>Hills</em> in Worldographer</li>
-  <li><strong>Mountains:</strong> mesas, glacier, tors e.g. <em>Mtn</em> in Worldographer</li>
-  <li><strong>Marsh:</strong> fen, slough, swamp, bog, mire, quagmire, morass e.g. <em>Marsh</em> in Worldographer</li>
-  <li><strong>Pond:</strong> pools, tarn, lake e.g. <em>Cosmic Planet High Water Medium Temperature</em> with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer</li>
-  <li><strong>Depression:</strong> gorge, rift, valley, canyon e.g. <em>Symbol Crater</em> with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer</li>
-</ul>
-
-<p>Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN table</p>
-
-<p>Can continue to build out map at this level, if desired.</p>
-
-<h2 id="select-sub-level-hex-terrain">Select Sub-level Hex Terrain</h2>
-
-<p>Note: Sub-level = CONTINENT level in Worldographer.</p>
-
-<p>Starting hex = Center hex of large hex, e.g. 40.24, and should have village/town icon and label from Atlas-level</p>
-
-<p>Here’s the steps to drill into the central hex at the Atlas-level to start creating the map you can use to in the first few sessions for the players to start their hex crawl:</p>
-
-<ol>
-  <li>In Worldographer, change Level to CONTINENT</li>
-  <li>Select 5 for <em>Number of Tiles</em> then click <strong>OK</strong>, <strong>OK</strong></li>
-</ol>
-
-<p><img src="../../../images/Worldographer-Child-Map-Number-of-Tiles-Settings.jpg" alt="Number of tiles setting for child map" /></p>
-
-<ol>
-  <li>Remove overspill hexes by selecting the Blank terrain then clicking on unwanted hex or holding down left mouse button and moving over them (overspill is any not part of the 6 large hexes surrounding starting large hex)</li>
-  <li>Add label at Continent Level with the text “6mi/hex”</li>
-</ol>
-
-<h2 id="generate-sub-level-hex-terrain">Generate Sub-level Hex Terrain</h2>
-
-<p>This follows the same process as generatign terrain at the Atlas-level except it is for 31 hexes this time.</p>
-
-<p>Here’s the steps to generate the terrain for the times surrounding your starting settlement:</p>
-
-<ol>
-  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
-  <li>Check first few hexes have some additional plains, e.g. low numbers, so it makes sence for a settlement like this and re-roll, if necessary, until terrain distribution feels right for what you have in mind for this area</li>
-  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains</li>
-  <li>Apply the generated terrains to all the tiles representing the higher level Atlas tile radiating out from the starting hex, e.g. 40.25
-    <ul>
-      <li>In Worldographer optionally blank out all hexes in center large hex except center starting hex to make it easier to see which hexes have had terrain from spreadsheet applied</li>
-    </ul>
-    <ul>
-      <li>Optionally make the center hex Farmland if village with farms</li>
-      <li>Apply randomly generated terrain to surrounding hexes until the terrain type starting at hex above starting hex. Proceed up until top of large hex reached, e.g. 40.42, 40.23, then proceed from hex to the right down to bottom of large hex, or until change in terrain type, e.g. 41.22, 41.23, 41.21, etc.</li>
-      <li>Repeat until all hexes adjacent hexes to center starting hex are filled:
-        <ul>
-          <li>When change in terrain reached set that hex to the new terrain type then start over at hex below or to the right of starting hex, e.g. 40.26, and proceed to bottom of large hex then proceed from hex to left up to top of large hex, or until change in terrain type</li>
-          <li>When change in terrain reached set that hex to the new terrain type then start over hex at below or to the left starting hex</li>
-        </ul>
-      </li>
-      <li>Now apply adhoc to remaining hexes using generated terrain as guidance, e.g. pick an unfilled hex to start applying the rest of the terrain to</li>
-      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
-      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)</li>
-    </ul>
-  </li>
-</ol>
-
-<div class="roll-results">
-   <label>Starting Tile:</label>
-   <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
-      <option value="Plains" selected="">Plains</option>
-      <option value="Scrub">Scrub</option>
-      <option value="Forest">Forest</option>
-      <option value="Desert">Desert</option>
-      <option value="Hills">Hills</option>
-      <option value="Mountains">Mountains</option>
-      <option value="Marsh">Marsh</option>
-   </select>
-  <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="3"></textarea>
-  <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
-  <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
-</div>
-
-<h2 id="determine-features-location--type">Determine Features, Location &amp; Type</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-27T19:31:29-10:00</updated><id>/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
 
 <p>Use Table 1.1 – Feature Types on page 7 and Figure One - Placing Lairs Features on page 5 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> to add additional, interesting features to the core hex. 1d6 features and 1d6 lairs in each 6-mile hex seems too dense, therefore, instead of every 6-mile hex up it a level so do every 30-mile hex has 6 features and 5 lairs, i.e. the entire large hex at the Sub-level. Feel free to adjust these numbers or roll to randomize the number per 30-mile hex.</p>
 
@@ -769,4 +370,397 @@ Rock Formations p14</p>
 
 <h3 id="generate-settlement-names">Generate Settlement Names</h3>
 
-<p>Use something like <a href="https://donjon.bin.sh/fantasy/name/#type=set;set=city">Don Jon’s Fantasy Name Generator</a></p>]]></content><author><name>jstoops</name></author><summary type="html"><![CDATA[I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.]]></summary></entry></feed>
+<p>Use something like <a href="https://donjon.bin.sh/fantasy/name/#type=set;set=city">Don Jon’s Fantasy Name Generator</a></p>]]></content><author><name>jstoops</name></author><summary type="html"><![CDATA[After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.]]></summary></entry><entry><title type="html">Hex Gen - The Surrounding Area</title><link href="/2025/07/26/osr-hex-gen-surrounding-area.html" rel="alternate" type="text/html" title="Hex Gen - The Surrounding Area" /><published>2025-07-26T00:00:00-10:00</published><updated>2025-07-26T00:00:00-10:00</updated><id>/2025/07/26/osr-hex-gen-surrounding-area</id><content type="html" xml:base="/2025/07/26/osr-hex-gen-surrounding-area.html"><![CDATA[<p>Once you’ve got your <a href="2025-07-25-osr-hex-gen-gygax-challenge.html">concept and pitch</a> figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.</p>
+
+<blockquote>
+  <p>”[…] sitting down with a large piece of hex ruled paper and drawing a large scale map. A map with a scale of 1 hex = 1 mile will be about right for player operations such as exploring, camping, adventuring, and eventually building their strongholds. Even such small things as a witch’s hut and side entrances to the dungeon can be shown on the map. The central features of the map must be the major town and the dungeon entrance.” – E.G.G.</p>
+</blockquote>
+
+<h2 id="set-up-worldographer">Set up Worldographer</h2>
+
+<p>Here’s the steps to setup Worldgrapher for a 15x15 hex map at the WORLD level:</p>
+
+<ol>
+  <li>Open Worldographer</li>
+  <li>Select File-&gt;New World/Kingdom Map</li>
+  <li>
+    <p>Settings:</p>
+
+    <ul>
+      <li><em>Hexes Wide:</em> 15</li>
+      <li><em>Hexes High:</em> 15</li>
+      <li><em>Initial View Level:</em> WORLD</li>
+      <li>Select <em>All one terrain</em> and set to: Blank</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="../../../images/Worldographer-New-World-Map.jpg" alt="New Worldographer 15x15 hex map settings" /></p>
+
+<ol>
+  <li>Click <strong>Generate Map</strong></li>
+  <li>Add label at World Level with the text “30mi/hex” by selecting Label-&gt;New Text Label and clicking on the the map to place it. Make sure only World is checked else it’ll appear on every level, not just the World level.</li>
+</ol>
+
+<p><img src="../../../images/Worldographer-World-Map-Scale-Label-Settings.jpg" alt="World map label settings" /><br />
+<img src="../../../images/Worldographer-World-Map-Scale-Label.jpg" alt="Example World map label" /></p>
+
+<ol>
+  <li>
+    <p>Show hex numbers &amp; reduce size:</p>
+
+    <ul>
+      <li>Check <em>Numbers</em> in bottom toolbar <img src="../../../images/Worldographer-Show-Hex-Numbers.jpg" alt="Show hex numbers and configure" /></li>
+      <li>Click the cog icon to the right of Numbers to Configure Tile Numbers</li>
+      <li>Make a lighter <em>Color</em> (e.g. #4d4d4d)</li>
+      <li>Set <em>Size</em> to 12</li>
+      <li>Set <em>Pre-Pad</em> to 10s digit</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="../../../images/Worldographer-Configure-Tile-Numbers.jpg" alt="Show hex numbers and configure" /></p>
+
+<h2 id="select-center-atlas-level-hex-terrain">Select Center Atlas-level Hex Terrain</h2>
+
+<p>Note: Atlas-level = WORLD level in Worldographer</p>
+
+<p>Here’s the steps to set the starting location on the World map (known as Atlas-level map in AD&amp;D) for your <strong>One large settlement</strong> (define large however you like):</p>
+
+<ol>
+  <li>Select Terrain-&gt;Farmland (aka plains in DMG) &amp; click on starting hex, e.g. 08.05, where the campaign will begin</li>
+</ol>
+
+<p><img src="../../../images/Worldographer-Terrain-Farmland-Plains.jpg" alt="Terrain for plains" /></p>
+
+<ol>
+  <li>Select Feature-&gt;Building Clanmoot icon (if you right-click on the icon or terrain you can add it to your favorites so easy to find again)</li>
+  <li>Enter label, e.g. Village of Hommlet</li>
+  <li>
+    <p>Settings:</p>
+
+    <ul>
+      <li>Check <em>Override color</em> and set to appropriate color e.g. Black</li>
+      <li>Check <em>Override Default Scale</em> and set to appropriate scale, e.g. 75</li>
+      <li>Check <em>Scale height independently</em> and set to appropriate scale, e.g. 75</li>
+      <li>Set <em>Label Style</em> to City or Village</li>
+      <li>Make sure World, Continent, Kingdom and Province is checked so feature icon and label appears on every level of the map</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="../../../images/Worldographer-Center-Map-Village-Label-Settings.jpg" alt="Starting location feature icon and label settings" /></p>
+
+<ol>
+  <li>Click in starting hex to place feature icon &amp; label for starting settlement, e.g. 08.05</li>
+</ol>
+
+<p><img src="../../../images/Worldographer-Center-Map-Village-Feature-Icon-Label.jpg" alt="Starting location feature icon and label" /></p>
+
+<h2 id="generate-surroundings-atlas-level-hex-terrain">Generate Surroundings Atlas-level Hex Terrain</h2>
+
+<p>Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that’s just 6 tiles.</p>
+
+<p>The tool below allows you to select the starting tile terrain type, “Plains” in this caase, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.</p>
+
+<p>Here’s the steps to generate terrain:</p>
+
+<ol>
+  <li><a onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')">Roll a d20 6 times</a>, noting down the result for each roll. These are the 6 terrain types surrounding your starting hex.</li>
+  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains, with the terrain type, e.g. if you rolled a 12 it is Scrub</li>
+  <li>Apply the generated terrains to surrounding hexes in Worldographer of starting hex, e.g. 08.06, starting at hex above, e.g. 08.04, and continuing clockwise for all 6 surrounding cells
+    <ul>
+      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
+      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="roll-results" style="float:right; width: 57%; padding-left: 5px;">
+   <label>Starting Tile:</label>
+   <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+      <option value="Plains" selected="">Plains</option>
+      <option value="Scrub">Scrub</option>
+      <option value="Forest">Forest</option>
+      <option value="Desert">Desert</option>
+      <option value="Hills">Hills</option>
+      <option value="Mountains">Mountains</option>
+      <option value="Marsh">Marsh</option>
+   </select>
+  <label>Rolls:</label> <input id="atlas-terrain-rolls" />
+  <label>Terrain Types:</label> <textarea id="atlas-terrain-types" rows="6"></textarea>
+  <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 20, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: center">Plains</th>
+      <th style="text-align: center">Scrub</th>
+      <th style="text-align: center">Forest</th>
+      <th style="text-align: center">Rough</th>
+      <th style="text-align: center">Desert</th>
+      <th style="text-align: center">Hills</th>
+      <th style="text-align: center">Mountains</th>
+      <th style="text-align: center">Marsh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Plains</td>
+      <td style="text-align: center">1-11</td>
+      <td style="text-align: center">1-3</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1-2</td>
+      <td style="text-align: center">1-3</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1-2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Scrub</td>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center">4-11</td>
+      <td style="text-align: center">2-4</td>
+      <td style="text-align: center">3-4</td>
+      <td style="text-align: center">4-5</td>
+      <td style="text-align: center">2-3</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3-4</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Forest*</td>
+      <td style="text-align: center">13</td>
+      <td style="text-align: center">12-13</td>
+      <td style="text-align: center">12-14</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">4-5</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">5-6</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Rough</td>
+      <td style="text-align: center">14</td>
+      <td style="text-align: center">14</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">6-8</td>
+      <td style="text-align: center">6-8</td>
+      <td style="text-align: center">6-7</td>
+      <td style="text-align: center">4-5</td>
+      <td style="text-align: center">7</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Desert</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">9-10</td>
+      <td style="text-align: center">9-14</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">N/A</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hills**</td>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center">11-15</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">9-14</td>
+      <td style="text-align: center">7-10</td>
+      <td style="text-align: center">8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Mountains***</td>
+      <td style="text-align: center">17</td>
+      <td style="text-align: center">17</td>
+      <td style="text-align: center">17</td>
+      <td style="text-align: center">16-17</td>
+      <td style="text-align: center">16-17</td>
+      <td style="text-align: center">15-16</td>
+      <td style="text-align: center">11-18</td>
+      <td style="text-align: center">N/A</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Marsh</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">17</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">9-15</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Pond</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">18-19</td>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">16-19</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Depression</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">20</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>
+*   1 in 10 also includes <b>hills</b>
+    aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
+**  1 in 10 also includes <b>forest</b>
+    aka Hill Forest Decid., Hill Forest Evrgr. in Worldographer.
+*** 1 in 20 have a <b>pass</b> which leads through the range
+    aka Shapes-&gt;Preset: Trail-&gt;Curve, reduce Width, e.g. 5 click
+    points through mountain to represent pass.
+</pre>
+
+<p>Terrain Guide:</p>
+
+<ul>
+  <li><strong>Plain:</strong> tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. <em>Farmland</em> in Worldographer</li>
+  <li><strong>Scrub:</strong> brush, veldt, bush, thickets, brackens e.g. <em>Grassland</em> in Worldographer</li>
+  <li><strong>Forest:</strong> woods, jungle, groves and copses (light forest) e.g. <em>Forest Decid.</em>, <em>Forest Evrgr.</em>, etc. in Worldographer</li>
+  <li><strong>Rough:</strong> badlands e.g. <em>Other Badland</em> in Worldographer</li>
+  <li><strong>Desert:</strong> barrens, waste, flat, snowfield e.g. <em>Desert Sandy</em> in Worldographer</li>
+  <li><strong>Hills:</strong> ridges, bluffs, dunes e.g. <em>Hills</em> in Worldographer</li>
+  <li><strong>Mountains:</strong> mesas, glacier, tors e.g. <em>Mtn</em> in Worldographer</li>
+  <li><strong>Marsh:</strong> fen, slough, swamp, bog, mire, quagmire, morass e.g. <em>Marsh</em> in Worldographer</li>
+  <li><strong>Pond:</strong> pools, tarn, lake e.g. <em>Cosmic Planet High Water Medium Temperature</em> with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer</li>
+  <li><strong>Depression:</strong> gorge, rift, valley, canyon e.g. <em>Symbol Crater</em> with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer</li>
+</ul>
+
+<p>Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN table</p>
+
+<p>Can continue to build out map at this level, if desired.</p>
+
+<h2 id="select-sub-level-hex-terrain">Select Sub-level Hex Terrain</h2>
+
+<p>Note: Sub-level = CONTINENT level in Worldographer.</p>
+
+<p>Starting hex = Center hex of large hex, e.g. 40.24, and should have village/town icon and label from Atlas-level</p>
+
+<p>Here’s the steps to drill into the central hex at the Atlas-level to start creating the map you can use to in the first few sessions for the players to start their hex crawl:</p>
+
+<ol>
+  <li>In Worldographer, change Level to CONTINENT</li>
+  <li>Select 5 for <em>Number of Tiles</em> then click <strong>OK</strong>, <strong>OK</strong></li>
+</ol>
+
+<p><img src="../../../images/Worldographer-Child-Map-Number-of-Tiles-Settings.jpg" alt="Number of tiles setting for child map" /></p>
+
+<ol>
+  <li>Remove overspill hexes by selecting the Blank terrain then clicking on unwanted hex or holding down left mouse button and moving over them (overspill is any not part of the 6 large hexes surrounding starting large hex)</li>
+  <li>Add label at Continent Level with the text “6mi/hex”</li>
+</ol>
+
+<h2 id="generate-sub-level-hex-terrain">Generate Sub-level Hex Terrain</h2>
+
+<p>This follows the same process as generatign terrain at the Atlas-level except it is for 31 hexes this time.</p>
+
+<p>Here’s the steps to generate the terrain for the times surrounding your starting settlement:</p>
+
+<ol>
+  <li><a onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')">Roll a d20 31 times</a>, noting down the result for each roll. These are the 31 terrain types surrounding your starting hex.</li>
+  <li>Check first few hexes have some additional plains, e.g. low numbers, so it makes sence for a settlement like this and re-roll, if necessary, until terrain distribution feels right for what you have in mind for this area</li>
+  <li>Define the terrain type for each roll using the table below by matching the result under your starting tile’s terrain column, i.e. Plains</li>
+  <li>Apply the generated terrains to all the tiles representing the higher level Atlas tile radiating out from the starting hex, e.g. 40.25
+    <ul>
+      <li>In Worldographer optionally blank out all hexes in center large hex except center starting hex to make it easier to see which hexes have had terrain from spreadsheet applied</li>
+    </ul>
+    <ul>
+      <li>Optionally make the center hex Farmland if village with farms</li>
+      <li>Apply randomly generated terrain to surrounding hexes until the terrain type starting at hex above starting hex. Proceed up until top of large hex reached, e.g. 40.42, 40.23, then proceed from hex to the right down to bottom of large hex, or until change in terrain type, e.g. 41.22, 41.23, 41.21, etc.</li>
+      <li>Repeat until all hexes adjacent hexes to center starting hex are filled:
+        <ul>
+          <li>When change in terrain reached set that hex to the new terrain type then start over at hex below or to the right of starting hex, e.g. 40.26, and proceed to bottom of large hex then proceed from hex to left up to top of large hex, or until change in terrain type</li>
+          <li>When change in terrain reached set that hex to the new terrain type then start over hex at below or to the left starting hex</li>
+        </ul>
+      </li>
+      <li>Now apply adhoc to remaining hexes using generated terrain as guidance, e.g. pick an unfilled hex to start applying the rest of the terrain to</li>
+      <li>Depressions &amp; Ponds: retains prior terrain type and apply special marking indicating it’s a depression or pond</li>
+      <li>1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="roll-results">
+   <label>Starting Tile:</label>
+   <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+      <option value="Plains" selected="">Plains</option>
+      <option value="Scrub">Scrub</option>
+      <option value="Forest">Forest</option>
+      <option value="Desert">Desert</option>
+      <option value="Hills">Hills</option>
+      <option value="Mountains">Mountains</option>
+      <option value="Marsh">Marsh</option>
+   </select>
+  <label>Rolls:</label> <textarea id="sub-terrain-rolls" rows="3"></textarea>
+  <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
+  <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>]]></content><author><name>jstoops</name></author><summary type="html"><![CDATA[Once you’ve got your concept and pitch figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.]]></summary></entry><entry><title type="html">Hex Gen - Gygax Challenge</title><link href="/2025/07/25/osr-hex-gen-gygax-challenge.html" rel="alternate" type="text/html" title="Hex Gen - Gygax Challenge" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>/2025/07/25/osr-hex-gen-gygax-challenge</id><content type="html" xml:base="/2025/07/25/osr-hex-gen-gygax-challenge.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
+
+<p>This approach can be used for any OSR (Old School Renaissance or Old School Revival) game like the original AD&amp;D, <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics (DCC)</a>, <a href="https://www.thearcanelibrary.com/collections/shadowdark-rpg">Shadowdark</a>, <a href="https://www.drivethrurpg.com/en/product/396879/deathbringer-rpg">Deathbringer</a>, <a href="https://jasontocci.itch.io/grave">Grave</a>, <a href="https://level2janitor.itch.io/iron-halberd">Iron Halberd</a>, <a href="https://questingbeast.itch.io/knave">Knave</a>, <a href="https://www.basicfantasy.org/">Basic Fantasy</a>, and many others based on the original DnD rules.</p>
+
+<p>The main inspiration for this “world building” process comes from <a href="https://archive.org/details/the-gygax-75-challenge-ttrpg-worldbuilding-resource">The Gygax 75 Challenge</a> that suggests the following steps:</p>
+
+<ol>
+  <li>The Concept: Pitch -&gt; Sources of Inspiration</li>
+  <li>Surrounding Area</li>
+  <li>The Dungeon</li>
+  <li>Town Features</li>
+  <li>The Larger World</li>
+</ol>
+
+<h1 id="week-1-the-concept-pitch-and-sources-of-inspiration">Week 1: The Concept: Pitch and Sources of Inspiration</h1>
+
+<p>So to get started, you need to articulate the big ideas and gather sources.</p>
+
+<blockquote>
+  <p>“Step 1 is something you do in your head. Now, fantasy/swords &amp; sorcery games need not have any fixed basis for the assumptions made by its referee (my own doesn’t) except those which embrace the whole of fantasy. This sort of campaign can mix any and all of the various bases which will be mentioned below - and then some. […]
+Settings based upon limits (if one can speak of fantasy limits) can be very interesting in themselves providing the scope of the setting will allow the players relative free-reign to their imaginations.” – E.G.G.</p>
+</blockquote>
+
+<h2 id="pitch">Pitch</h2>
+
+<p>In the Gygax 75 Challenge is suggested that you write down 3-7 well-crafted bullet points that will both communicate and “sell” the world to your players.</p>
+
+<p>For example:</p>
+
+<ul>
+  <li><em>The Forsaken Frontier</em> is on the edge of civilization where settlers seek their fortune and cling to the protection of local nobles and warlords.</li>
+  <li><em>The Wilds.</em> Not far beyond though, the Frontier is wild where millennia of forgotten civilizations lie in ruins crawling with monsters, evil sorcerers, distant kingdoms of ancient races, and in the unexplored depths an otherworldly evil.</li>
+  <li><em>Player characters are human.</em> Creatures that are either more or less than human come from interactions between gods and mortals or from a more ancient time. These creatures are feared and mistrusted, even if some have become human (e.g. the centaurs).</li>
+  <li><em>Magic is unknown, dangerous, and inhuman.</em> Even the best wizards occasionally fail to properly harness a spell, with unpredictable results. Low-level wizards are powerful. High-level wizards fear for their souls. Continual use of magic results in…changes. Exposure to demons, radiation from other planes, elemental energies in toxic quantities, and the servants of Chaos all affect a wizard over the course of his career. Magic is unpredictable and spells can fail, or may misfire, and the magic user may suffer corruption.</li>
+</ul>
+
+<h2 id="sources-of-inspiration">Sources of Inspiration</h2>
+
+<ul>
+  <li>The Keep on the Borderlands and the Amber Castle, book series like <a href="https://dungeonsanddragonsfan.com/legend-of-drizzt-books-in-order/">The Legend of Drizzt by R.A. Salvatore</a> and <a href="https://en.wikipedia.org/wiki/The_Black_Company">The Black Company by Glen Cook</a>, and the classic AD&amp;D 1e Dungeon Masters Guide.</li>
+</ul>
+
+<h1 id="tools">Tools</h1>
+
+<p>So, how do you go about creating your own hex map from scratch using the random tables in the AD&amp;D 1e Dungeon Masters Guide (DMG) and other resources?</p>
+
+<p>I’m using the tool <a href="https://worldographer.com/">Worldgrapher</a> because the <a href="https://store.inkwellideas.com/products/bunlde-hexographer-cityographer-and-dungeonographer-pro-versions">pro version</a> allows multiple map levels so you can start with a high-level world map and zoom into continent, kingdom, and province detail maps which works well with the DMG and can be fully configured and customized to your preferred number of hexes within the previous levels hex. I’ve also used the free version, <a href="https://www.hexographer.com/free-version/">Hexographer</a>, for years to create hex maps and will work fine for this you just have to create a separate map for each level so the steps will be slightly different.</p>
+
+<p><a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> and <a href="https://www.drivethrurpg.com/en/product/124392/d30-sandbox-companion">D30 Sandbox Companion</a> have useful rules for generating specific aspects of your world too that are useful.</p>]]></content><author><name>jstoops</name></author><summary type="html"><![CDATA[I’m planning on starting an Old School Essentials game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by Games from the Front that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: Old School Essentials.]]></summary></entry></feed>
