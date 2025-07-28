@@ -57,48 +57,48 @@ td:first-child {
     margin: 0 auto;
 }
 
-#blog-post * {
+#page-content * {
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
 }
 
-#blog-post a {
+#page-content a {
     color: #ff0;
 }
 
-#blog-post h1.title {
+#page-content h1.title {
     font-size:400%;
 }
 
-#blog-post h1 {
+#page-content h1 {
     font-size:350%;
 }
 
-#blog-post h2, .rpgui-content h2 {
+#page-content h2, .rpgui-content h2 {
     font-size:300%;
 }
 
-#blog-post h2 a {
+#page-content h2 a {
     font-size: 100%;
 }
 
-#blog-posts h3, #blog-posts h4 {
+#page-content h3, #page-content h4 {
     font-size:250%;
 }
 
-#blog-posts h5, #blog-posts h6 {
+#page-content h5, #page-content h6 {
     font-size:200%;
 }
 
-#blog-post p, #blog-post a, #blog-post li, #blog-post label, #blog-post th, #blog-post td {
+#page-content p, #page-content a, #page-content li, #page-content label, #page-content th, #page-content td {
     font-size: 16pt;
 }
 
-#blog-post label, #blog-post button {
+#page-content label, #page-content button {
     font-weight: bolder;
 }
 
-#blog-post img {
+#page-content img {
     display: block;
     margin: 0 auto;
 }

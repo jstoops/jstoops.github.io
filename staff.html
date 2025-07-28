@@ -1,14 +1,13 @@
 ---
 title: Staff
 ---
-<h1>Staff</h1>
-
-<ul>
+<div id='staff'>
+  <h1>Staff</h1>
   {% for author in site.authors %}
-    <li>
+    <div class="rpgui-container framed-golden" style="position:relative; width:100%; height:auto; display:inline-block">
       <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-      <h3>{{ author.position }}</h3>
+      <h4>{{ author.position }}</h4>
       <p>{{ author.content | markdownify }}</p>
-    </li>
+  </div>
   {% endfor %}
-</ul>
+</div>

@@ -1,5 +1,5 @@
 ---
-author: jstoops
+author: clanredhead
 title: Hex Gen - Gygax Challenge
 ---
 

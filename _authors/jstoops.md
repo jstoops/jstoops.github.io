@@ -1,6 +1,6 @@
 ---
-short_name: jstoops
-name: John Stoops
+short_name: clanredhead
+name: Cpt. Redbeard
 position: Game Master / Referee
 ---
 

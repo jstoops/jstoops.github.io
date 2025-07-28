@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/rpgui.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Tools</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Tools" />
 <meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/tools.html" />
+<meta property="og:url" content="http://localhost:4000/tools.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Tools" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Tools","url":"/tools.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Tools","url":"http://localhost:4000/tools.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -52,21 +54,20 @@
     
   </nav>
 </div>
-          <h1 id="tools">Tools</h1>
+          <div id='page-content'>
+            <p>Here’s a collection of tools created while creating content for our games that you may find useful.</p>
 
-<p>Here’s a collection of tools created while creating content for our games that you may find useful.</p>
+<h1 id="ttrpg-tools">TTRPG Tools</h1>
 
-<h2 id="ttrpg-tools">TTRPG Tools</h2>
+<h2 id="hex-map-generation">Hex Map Generation</h2>
 
-<h3 id="hex-map-generation">Hex Map Generation</h3>
-
-<h4 id="terrain-tile-generation">Terrain Tile Generation</h4>
+<h3 id="terrain-tile-generation">Terrain Tile Generation</h3>
 
 <p>For more details on how to use see the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> blog post from the OSR Hex Map Generation series following the <a href="https://archive.org/details/the-gygax-75-challenge-ttrpg-worldbuilding-resource">The Gygax 75 Challenge</a>.</p>
 
-<div class="roll-results">
+<div class="roll-results rpgui-container framed-golden-2" style="position:relative; width:100%; height:auto; display:inline-block">
     <label>Starting Tile:</label>
-    <select id="sub-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
+    <select id="terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
         <option value="Plains" selected="">Plains</option>
         <option value="Scrub">Scrub</option>
         <option value="Forest">Forest</option>
@@ -76,19 +77,21 @@
         <option value="Marsh">Marsh</option>
     </select>
     <br />
-    <label>Number of Hexes:</label> <input id="no-hexes" type="number" value="31" oninput="no-hexes-slider.value=no-hexes.value" /> <input class="rpgui-slider" type="range" id="no-hexes-slider" name="noHexsSlider" min="1" max="100" value="31" data-rpguitype="slider" oninput="no-hexes.value=no-hexes-slider.value" />
-    <input class="my-slider" id="rangeInput" type="range" min="0" max="200" oninput="amount.value=rangeInput.value" />
-    <input id="amount" type="number" value="100" min="0" max="200" oninput="rangeInput.value=amount.value" />
-    <label>Terrain Types:</label> <textarea id="sub-terrain-types" rows="31"></textarea>
-    <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, 31, 20, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <label>Number of Hexes:</label> <input id="no-hexes" value="31" />
+    <label>Rolls:</label> <input id="terrain-rolls" />
+    <label>Terrain Types:</label> <textarea id="terrain-types" rows="6"></textarea>
+    <button onclick="generateTerrain(document.getElementById('terrain-type').value, document.getElementById('no-hexes').value, 20, 'terrain-rolls', 'terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<h2 id="game-development-tools">Game Development Tools</h2>
+<div style="clear: both;" />
+
+<h1 id="game-dev-tools">Game Dev Tools</h1>
 
 <p><br /><br /><br /><br /><br /><br /><br /><br />
 <img src="images/skelly2.png" style="display:inline-block; width:160px;bottom: 0;left: 0px;position: absolute;" />
 <img src="images/skelly2.png" style="display:inline-block; width:160px;bottom: 0;right: 0px;position: absolute;transform: scaleX(-1);" /></p>
 
+          </div>
         </div>
       </div>
     </div>
