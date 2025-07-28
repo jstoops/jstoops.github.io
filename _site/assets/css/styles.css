@@ -5,49 +5,6 @@ body, #container {
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
 }
 
-ul li {
-    list-style-position: inside;
-    list-style: disc;
-    padding-left: 20px;
-}
-
-h1 {
-    font-size:150%;
-}
-
-pre {
-    color: #ffffff;
-    font-size:80%;
-}
-
-table, th, td {
-    border: 1px solid #f0f0f0;
-}
-
-th, td {
-  padding-top: 2px;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-}
-
-table {
-    border-collapse: collapse;
-    background: url(../../assets/img/select-background-image.png) center;
-    background-clip: padding-box;
-    background-origin: padding-box;
-}
-
-thead th, tbody tr:nth-child(even) {
-    background: url(../../assets/img/background-image-golden2.png) center;
-    background-clip: padding-box;
-    background-origin: padding-box;
-}
-
-td:first-child {
-  font-weight: bold;
-}
-
 .inner {
     background: #444;
     padding-left: 20px;
@@ -55,6 +12,51 @@ td:first-child {
     min-width: 740px;
     max-width: 900px;
     margin: 0 auto;
+}
+
+#page-content ul li {
+    list-style-position: inside;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#page-content h1 {
+    font-size:150%;
+}
+
+#page-content pre {
+    color: #ffffff;
+    font-size:80%;
+}
+
+#page-content table, th, td {
+    border: 1px solid #f0f0f0;
+}
+
+#page-content th, td {
+    padding-top: 2px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    font-size: 1rem;
+    line-height: normal;
+}
+
+#page-content table {
+    border-collapse: collapse;
+    background: url(../../assets/img/select-background-image.png) center;
+    background-clip: padding-box;
+    background-origin: padding-box;
+}
+
+#page-content thead th, tbody tr:nth-child(even) {
+    background: url(../../assets/img/background-image-golden2.png) center;
+    background-clip: padding-box;
+    background-origin: padding-box;
+}
+
+#page-content td:first-child {
+    font-weight: bold;
 }
 
 #page-content * {
@@ -90,8 +92,9 @@ td:first-child {
     font-size:200%;
 }
 
-#page-content p, #page-content a, #page-content li, #page-content label, #page-content th, #page-content td {
-    font-size: 16pt;
+#page-content p, #page-content a, #page-content li, #page-content label {
+    font-size: 1.5rem;
+    line-height: 1.2;
 }
 
 #page-content label, #page-content button {
@@ -112,10 +115,10 @@ td:first-child {
     border-width: 15px;
 }
 
-.rpgui-content .roll-results textarea {
-  height: fit-content;
+#page-content input, #page-content textarea, #page-content select, #page-content button p {
+    font-size: 1rem;
 }
 
-input.my-slider {
-    cursor: url(../img/cursor/point.png) 10 0,auto;
+#page-content textarea {
+    height: fit-content;
 }

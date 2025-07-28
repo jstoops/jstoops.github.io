@@ -282,6 +282,18 @@ function elevationChangeReason(displayElement) {
   output.value = "Unknown";
 }
 
+function elevationChangeHigherLower(displayElement) {
+  const output = document.getElementById(displayElement);
+  const noSides = 6;
+  result = rollDice(noSides);
+  if (result < 4) {
+    output.value = "Higher than the surrounding land";
+  }
+  else {
+    output.value = "Lower than the surrounding land";
+  }
+}
+
 const elevationChangeAmountRanges = [
   { min: 1, max: 60, text: "The land is YARDS lower or higher than the surrounding area.", noDice: 5, noSides: 20, multipliedBy: 1 },
   { min: 61, max: 75, text: "The land is YARDS lower or higher than the surrounding area", noDice: 1, noSides: 6, multipliedBy: 100 },

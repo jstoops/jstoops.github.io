@@ -10,7 +10,7 @@ Here's a collection of tools created while creating content for our games that y
 
 ### Terrain Tile Generation
 
-For more details on how to use see the <a href="2025/07/26/osr-hex-gen-surrounding-area.html">surrounding area</a> blog post from the OSR Hex Map Generation series following the [The Gygax 75 Challenge](https://archive.org/details/the-gygax-75-challenge-ttrpg-worldbuilding-resource).
+For more details on how to apply these to your hex map see the <a href="2025/07/26/osr-hex-gen-surrounding-area.html">The Surrounding Area</a> blog post from the OSR Hex Map Generation series following the [The Gygax 75 Challenge](https://archive.org/details/the-gygax-75-challenge-ttrpg-worldbuilding-resource).
 
 <div class="roll-results rpgui-container framed-golden-2" style="position:relative; width:100%; height:auto; display:inline-block">
     <h2>Generate Terrain</h2>
@@ -35,7 +35,7 @@ For more details on how to use see the <a href="2025/07/26/osr-hex-gen-surroundi
 
 ### Features and Lairs Generation
 
-For more details on how to use see the <a href="2025/07/27/osr-hex-gen-features-lairs.html">features and lairs</a> blog post from the OSR Hex Map Generation series following the [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) approach.
+For more details on applying these to your hex map see the <a href="2025/07/27/osr-hex-gen-features-lairs.html">Features and Lairs</a> blog post from the OSR Hex Map Generation series following the [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) approach.
 
 <div class="roll-results rpgui-container framed-golden-2" style="float:left; width: 45%; padding-right: 10px; position:relative; height:auto; display:inline-block">
    <h2>Features</h2>
@@ -56,14 +56,15 @@ For more details on how to use see the <a href="2025/07/27/osr-hex-gen-features-
 
 #### Flesh Out Features
 
-##### Depressions
+##### Change in Elevation
 
-For more details on how to use see the <a href="2025/07/27/osr-hex-gen-features-lairs.html">features and lairs</a> blog post from the OSR Hex Map Generation series following the [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) approach.
+For more details on changes in elevation see the Depressions section of Flesh Out the Features in <a href="2025/07/27/osr-hex-gen-features-lairs.html">features and lairs</a> blog post from the OSR Hex Map Generation series following the [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) approach.
 
 <div class="roll-results rpgui-container framed-golden-2" style="width: 100%; position:relative; height:auto; display:inline-block">
-    <h2>Depression details</h2>
+    <h2>Elevation Changes</h2>
     <input id="elevation-change-reason" placeholder="Why did the elevation change?" style="width: 78%" /> <button onClick="elevationChangeReason('elevation-change-reason')" class="rpgui-button" type="button"><p>Re-roll</p></button>
-    <input id="elevation-change-amount" placeholder="Lower by how much?" style="width: 78%" /> <button onClick="elevationChangeAmount('elevation-change-amount')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-higher-lower" placeholder="Is the elevation higher or lower than the surrounding land?" style="width: 78%" /> <button onClick="elevationChangeHigherLower('elevation-change-higher-lower')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-amount" placeholder="Higher or lower by how much?" style="width: 78%" /> <button onClick="elevationChangeAmount('elevation-change-amount')" class="rpgui-button" type="button"><p>Re-roll</p></button>
     <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 78%" /> <button onClick="elevationChangeArea('elevation-change-area')" class="rpgui-button" type="button"><p>Re-roll</p></button>
     <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" style="width: 78%" /> <button onClick="elevationChangeDifference('elevation-change-difference')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
