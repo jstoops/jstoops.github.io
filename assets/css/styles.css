@@ -22,7 +22,6 @@ pre {
 
 table, th, td {
     border: 1px solid #f0f0f0;
-    color: #ffffff;
 }
 
 th, td {
@@ -54,8 +53,45 @@ thead th, tbody tr:nth-child(even) {
     margin: 0 auto;
 }
 
-#blog-post h1.title, #blog-posts h2 {
+#blog-post * {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+}
+
+#blog-post a {
+    color: #ff0;
+}
+
+#blog-post h1.title {
+    font-size:400%;
+}
+
+#blog-post h1 {
+    font-size:350%;
+}
+
+#blog-post h2, .rpgui-content h2 {
+    font-size:300%;
+}
+
+#blog-post h2 a {
+    font-size: 150%;
+}
+
+#blog-posts h3, #blog-posts h4 {
+    font-size:250%;
+}
+
+#blog-posts h5, #blog-posts h6 {
     font-size:200%;
+}
+
+#blog-post p, #blog-post a, #blog-post li, #blog-post label, #blog-post th, #blog-post td {
+    font-size: 16pt;
+}
+
+#blog-post label, #blog-post button {
+    font-weight: bolder;
 }
 
 #blog-post img {
