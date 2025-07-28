@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-28T10:47:25-10:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-28T11:53:04-10:00</updated><id>/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
 
 <p>Use Table 1.1 – Feature Types on page 7 and Figure One - Placing Lairs Features on page 5 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> to add additional, interesting features to the core hex. 1d6 features and 1d6 lairs in each 6-mile hex seems too dense, therefore, instead of every 6-mile hex up it a level so do every 30-mile hex has 6 features and 5 lairs, i.e. the entire large hex at the Sub-level. Feel free to adjust these numbers or roll to randomize the number per 30-mile hex.</p>
 
@@ -26,9 +26,10 @@
    <button onclick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
 
-<p><strong>Table 1.1 – Feature Types</strong></p>
+<p><br />
+<em>Table 1.1 – Feature Types</em></p>
 
 <table>
   <thead>
@@ -83,7 +84,7 @@
 
 <p>Use the figure below to determine the hex numbers for placing the features and lairs.</p>
 
-<p><img src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
+<p><img class="framed" src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
 
 <p>Source: <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a></p>
 
@@ -99,7 +100,7 @@
 
 <ol>
   <li>
-    <p>Why did the elevation change? <a onclick="elevationChangeReason(100, 'elevation-change-reason')">Roll a d100</a></p>
+    <p>Why did the elevation change? <a onclick="elevationChangeReason('elevation-change-reason')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Reason Table</em> below to determine reason</li>
@@ -107,7 +108,7 @@
     </ul>
   </li>
   <li>
-    <p>Lower by how much? <a onclick="elevationChangeAmount(100, 'elevation-change-amount')">Roll a d100</a></p>
+    <p>Lower by how much? <a onclick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Amount Table</em> below to determine by how much</li>
@@ -115,7 +116,7 @@
     </ul>
   </li>
   <li>
-    <p>How large is the area with changed terrain? <a onclick="elevationChangeArea(100, 'elevation-change-area')">Roll a d100</a></p>
+    <p>How large is the area with changed terrain? <a onclick="elevationChangeArea('elevation-change-area')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Area Table</em> below to determine how large an area changed</li>
@@ -123,7 +124,7 @@
     </ul>
   </li>
   <li>
-    <p>Is the terrain within the change of elevation different than the surrounds? <a onclick="document.getElementById('elevation-change-difference').value=rollMultipleDice(1, 100)*100">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.</p>
+    <p>Is the terrain within the change of elevation different than the surrounds? <a onclick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.</p>
 
     <ul>
       <li>There is a <em>1-4 in 6 chance</em> that the change in elevation represents a differing terrain type than the surrounding environs.</li>
@@ -372,7 +373,7 @@ Rock Formations p14</p>
 
 <h3 id="generate-settlement-names">Generate Settlement Names</h3>
 
-<p>Use something like <a href="https://donjon.bin.sh/fantasy/name/#type=set;set=city">Don Jon’s Fantasy Name Generator</a></p>]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.]]></summary></entry><entry><title type="html">Hex Gen - The Surrounding Area</title><link href="http://localhost:4000/2025/07/26/osr-hex-gen-surrounding-area.html" rel="alternate" type="text/html" title="Hex Gen - The Surrounding Area" /><published>2025-07-26T00:00:00-10:00</published><updated>2025-07-26T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/26/osr-hex-gen-surrounding-area</id><content type="html" xml:base="http://localhost:4000/2025/07/26/osr-hex-gen-surrounding-area.html"><![CDATA[<p>Once you’ve got your <a href="2025-07-25-osr-hex-gen-gygax-challenge.html">concept and pitch</a> figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.</p>
+<p>Use something like <a href="https://donjon.bin.sh/fantasy/name/#type=set;set=city">Don Jon’s Fantasy Name Generator</a></p>]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.]]></summary></entry><entry><title type="html">Hex Gen - The Surrounding Area</title><link href="/2025/07/26/osr-hex-gen-surrounding-area.html" rel="alternate" type="text/html" title="Hex Gen - The Surrounding Area" /><published>2025-07-26T00:00:00-10:00</published><updated>2025-07-26T00:00:00-10:00</updated><id>/2025/07/26/osr-hex-gen-surrounding-area</id><content type="html" xml:base="/2025/07/26/osr-hex-gen-surrounding-area.html"><![CDATA[<p>Once you’ve got your <a href="2025-07-25-osr-hex-gen-gygax-challenge.html">concept and pitch</a> figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.</p>
 
 <blockquote>
   <p>”[…] sitting down with a large piece of hex ruled paper and drawing a large scale map. A map with a scale of 1 hex = 1 mile will be about right for player operations such as exploring, camping, adventuring, and eventually building their strongholds. Even such small things as a witch’s hut and side entrances to the dungeon can be shown on the map. The central features of the map must be the major town and the dungeon entrance.” – E.G.G.</p>
@@ -397,15 +398,15 @@ Rock Formations p14</p>
   </li>
 </ol>
 
-<p><img src="../../../images/Worldographer-New-World-Map.jpg" alt="New Worldographer 15x15 hex map settings" /></p>
+<p><img class="framed" src="../../../images/Worldographer-New-World-Map.jpg" alt="New Worldographer 15x15 hex map settings" /></p>
 
 <ol>
   <li>Click <strong>Generate Map</strong></li>
   <li>Add label at World Level with the text “30mi/hex” by selecting Label-&gt;New Text Label and clicking on the the map to place it. Make sure only World is checked else it’ll appear on every level, not just the World level.</li>
 </ol>
 
-<p><img src="../../../images/Worldographer-World-Map-Scale-Label-Settings.jpg" alt="World map label settings" /><br />
-<img src="../../../images/Worldographer-World-Map-Scale-Label.jpg" alt="Example World map label" /></p>
+<p><img class="framed" src="../../../images/Worldographer-World-Map-Scale-Label-Settings.jpg" alt="World map label settings" /><br />
+<img class="framed" src="../../../images/Worldographer-World-Map-Scale-Label.jpg" alt="Example World map label" /></p>
 
 <ol>
   <li>
@@ -421,7 +422,7 @@ Rock Formations p14</p>
   </li>
 </ol>
 
-<p><img src="../../../images/Worldographer-Configure-Tile-Numbers.jpg" alt="Show hex numbers and configure" /></p>
+<p><img class="framed" src="../../../images/Worldographer-Configure-Tile-Numbers.jpg" alt="Show hex numbers and configure" /></p>
 
 <h2 id="select-center-atlas-level-hex-terrain">Select Center Atlas-level Hex Terrain</h2>
 
@@ -433,7 +434,7 @@ Rock Formations p14</p>
   <li>Select Terrain-&gt;Farmland (aka plains in DMG) &amp; click on starting hex, e.g. 08.05, where the campaign will begin</li>
 </ol>
 
-<p><img src="../../../images/Worldographer-Terrain-Farmland-Plains.jpg" alt="Terrain for plains" /></p>
+<p><img class="framed" src="../../../images/Worldographer-Terrain-Farmland-Plains.jpg" alt="Terrain for plains" /></p>
 
 <ol>
   <li>Select Feature-&gt;Building Clanmoot icon (if you right-click on the icon or terrain you can add it to your favorites so easy to find again)</li>
@@ -451,17 +452,17 @@ Rock Formations p14</p>
   </li>
 </ol>
 
-<p><img src="../../../images/Worldographer-Center-Map-Village-Label-Settings.jpg" alt="Starting location feature icon and label settings" /></p>
+<p><img class="framed" src="../../../images/Worldographer-Center-Map-Village-Label-Settings.jpg" alt="Starting location feature icon and label settings" /></p>
 
 <ol>
   <li>Click in starting hex to place feature icon &amp; label for starting settlement, e.g. 08.05</li>
 </ol>
 
-<p><img src="../../../images/Worldographer-Center-Map-Village-Feature-Icon-Label.jpg" alt="Starting location feature icon and label" /></p>
+<p><img class="framed" src="../../../images/Worldographer-Center-Map-Village-Feature-Icon-Label.jpg" alt="Starting location feature icon and label" /></p>
 
 <h2 id="generate-surroundings-atlas-level-hex-terrain">Generate Surroundings Atlas-level Hex Terrain</h2>
 
-<p>Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that’s just 6 tiles.</p>
+<p>Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 173 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that’s just 6 tiles.</p>
 
 <p>The tool below allows you to select the starting tile terrain type, “Plains” in this caase, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.</p>
 
@@ -478,7 +479,7 @@ Rock Formations p14</p>
   </li>
 </ol>
 
-<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 57%; padding-left: 5px; position:relative; height:auto; display:inline-block">
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 52%; padding-left: 5px; position:relative; height:auto; display:inline-block">
    <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
@@ -495,9 +496,12 @@ Rock Formations p14</p>
   <button onclick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<p><img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
+<p><img class="framed" src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" /></p>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
+
+<p><br />
+<em>Appendix B – Random Wilderness Terrain</em></p>
 
 <table>
   <thead>
@@ -637,7 +641,7 @@ Rock Formations p14</p>
     points through mountain to represent pass.
 </pre>
 
-<p>Terrain Guide:</p>
+<p><em>Appendix B – Terrain Guide</em></p>
 
 <ul>
   <li><strong>Plain:</strong> tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. <em>Farmland</em> in Worldographer</li>
@@ -652,7 +656,7 @@ Rock Formations p14</p>
   <li><strong>Depression:</strong> gorge, rift, valley, canyon e.g. <em>Symbol Crater</em> with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer</li>
 </ul>
 
-<p>Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN table</p>
+<p>Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN</p>
 
 <p>Can continue to build out map at this level, if desired.</p>
 
@@ -669,7 +673,7 @@ Rock Formations p14</p>
   <li>Select 5 for <em>Number of Tiles</em> then click <strong>OK</strong>, <strong>OK</strong></li>
 </ol>
 
-<p><img src="../../../images/Worldographer-Child-Map-Number-of-Tiles-Settings.jpg" alt="Number of tiles setting for child map" /></p>
+<p><img class="framed" src="../../../images/Worldographer-Child-Map-Number-of-Tiles-Settings.jpg" alt="Number of tiles setting for child map" /></p>
 
 <ol>
   <li>Remove overspill hexes by selecting the Blank terrain then clicking on unwanted hex or holding down left mouse button and moving over them (overspill is any not part of the 6 large hexes surrounding starting large hex)</li>
@@ -724,7 +728,7 @@ Rock Formations p14</p>
    <button onclick="generateTerrain(document.getElementById('sub-terrain-type').value, document.getElementById('sub-terrain-no-hexes').value, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[Once you’ve got your concept and pitch figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.]]></summary></entry><entry><title type="html">Hex Gen - Gygax Challenge</title><link href="http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge.html" rel="alternate" type="text/html" title="Hex Gen - Gygax Challenge" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge</id><content type="html" xml:base="http://localhost:4000/2025/07/25/osr-hex-gen-gygax-challenge.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
+<div style="clear: both;"></div>]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[Once you’ve got your concept and pitch figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.]]></summary></entry><entry><title type="html">Hex Gen - Gygax Challenge</title><link href="/2025/07/25/osr-hex-gen-gygax-challenge.html" rel="alternate" type="text/html" title="Hex Gen - Gygax Challenge" /><published>2025-07-25T00:00:00-10:00</published><updated>2025-07-25T00:00:00-10:00</updated><id>/2025/07/25/osr-hex-gen-gygax-challenge</id><content type="html" xml:base="/2025/07/25/osr-hex-gen-gygax-challenge.html"><![CDATA[<p>I’m planning on starting an <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game and needed to create a hex map for it. While looking up techniques to do this I came across this video series by <a href="https://www.youtube.com/@GamesfromtheFront">Games from the Front</a> that inspired me to use this approach and wanted to share it with my fellow TTRPG enthusiasts: <a href="https://www.youtube.com/playlist?list=PLk0ytbdOezZttM7yCY3pA9GGjCxNcjjL_">Old School Essentials</a>.</p>
 
 <p>This approach can be used for any OSR (Old School Renaissance or Old School Revival) game like the original AD&amp;D, <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics (DCC)</a>, <a href="https://www.thearcanelibrary.com/collections/shadowdark-rpg">Shadowdark</a>, <a href="https://www.drivethrurpg.com/en/product/396879/deathbringer-rpg">Deathbringer</a>, <a href="https://jasontocci.itch.io/grave">Grave</a>, <a href="https://level2janitor.itch.io/iron-halberd">Iron Halberd</a>, <a href="https://questingbeast.itch.io/knave">Knave</a>, <a href="https://www.basicfantasy.org/">Basic Fantasy</a>, and many others based on the original DnD rules.</p>
 

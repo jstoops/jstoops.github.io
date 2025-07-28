@@ -103,6 +103,15 @@ td:first-child {
     margin: 0 auto;
 }
 
+#page-content img.framed {
+    border-style: solid;
+    border-image-source: url(../img/border-image.png);
+    border-image-repeat: repeat;
+    border-image-slice: 6 6 6 6;
+    border-image-width: 18px;
+    border-width: 15px;
+}
+
 .rpgui-content .roll-results textarea {
   height: fit-content;
 }

@@ -269,8 +269,9 @@ const elevationChangeReasonRanges = [
   { min: 100, max: 100, text: "Referee's choice" }
 ];
 
-function elevationChangeReason(noSides, displayElement) {
+function elevationChangeReason(displayElement) {
   const output = document.getElementById(displayElement);
+  const noSides = 100;
   result = rollDice(noSides);
   for (const range of elevationChangeReasonRanges) {
     if (result >= range.min && result <= range.max) {
@@ -287,8 +288,9 @@ const elevationChangeAmountRanges = [
   { min: 76, max: 100, text: "The land is YARDS lower or higher than the surrounding area.", noDice: 1, noSides: 20, multipliedBy: 100 }
 ];
 
-function elevationChangeAmount(noSides, displayElement) {
+function elevationChangeAmount(displayElement) {
   const output = document.getElementById(displayElement);
+  const noSides = 100;
   result = rollDice(noSides);
   for (const range of elevationChangeAmountRanges) {
     if (result >= range.min && result <= range.max) {
@@ -300,19 +302,43 @@ function elevationChangeAmount(noSides, displayElement) {
 }
 
 const elevationChangeAreaRanges = [
-  { min: 1, max: 35, text: "a single subhex", noDice: 1, noSides: 1, modifier: 0 },
+  { min: 1, max: 35, text: "A single subhex", noDice: 1, noSides: 1, modifier: 0 },
   { min: 36, max: 70, text: "AREA subhexes", noDice: 1, noSides: 4, modifier: 1 },
   { min: 71, max: 85, text: "AREA subhexes", noDice: 3, noSides: 4, modifier: 0 },
   { min: 86, max: 98, text: "AREA subhexes", noDice: 4, noSides: 8, modifier: 0 },
   { min: 99, max: 100, text: "AREA total hexes", noDice: 1, noSides: 4, modifier: 1 }
 ];
 
-function elevationChangeArea(noSides, displayElement) {
+function elevationChangeArea(displayElement) {
   const output = document.getElementById(displayElement);
+  const noSides = 100;
   result = rollDice(noSides);
   for (const range of elevationChangeAreaRanges) {
     if (result >= range.min && result <= range.max) {
       output.value = range.text.replace("AREA", rollMultipleDice(range.noDice, noSides)+range.modifier);
+      return;
+    }
+  }
+  output.value = "Unknown";
+}
+
+const elevationChangeDegreeRanges = [
+  { min: 1, max: 4, text: "Within one degree of surrounding terrain" },
+  { min: 5, max: 6, text: "Within two degrees of surrounding terrain" }
+];
+
+function elevationChangeDifference(displayElement) {
+  const output = document.getElementById(displayElement);
+  const noSides = 6;
+  result = rollDice(noSides);
+  if (result > 5) {
+    output.value = "No difference";
+    return;
+  }
+  result = rollDice(noSides);
+  for (const range of elevationChangeDegreeRanges) {
+    if (result >= range.min && result <= range.max) {
+      output.value = range.text;
       return;
     }
   }
@@ -326,10 +352,11 @@ const resourceExceptionalValueRanges = [
   { min: 8, max: 8, text: "100% more that base value" }
 ];
 
-function resourceExceptionalValue(noSides, displayElement) {
+function resourceExceptionalValue(displayElement) {
   const output = document.getElementById(displayElement);
+  const noSides = 6;
   result = rollDice(noSides);
-  if (result < 20) {
+  if (result < 6) {
     output.value = "No, not exceptional";
     return;
   }

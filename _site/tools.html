@@ -7,19 +7,17 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/rpgui.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Tools</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Tools" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/tools.html" />
-<meta property="og:url" content="http://localhost:4000/tools.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Tools" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Tools","url":"http://localhost:4000/tools.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Tools","url":"/tools.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -84,7 +82,7 @@
     <button onclick="generateTerrain(document.getElementById('terrain-type').value, document.getElementById('no-hexes').value, 'terrain-rolls', 'terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
 
 <h3 id="features-and-lairs-generation">Features and Lairs Generation</h3>
 
@@ -105,7 +103,23 @@
    <button onclick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
+
+<h4 id="flesh-out-features">Flesh Out Features</h4>
+
+<h5 id="depressions">Depressions</h5>
+
+<p>For more details on how to use see the <a href="2025/07/27/osr-hex-gen-features-lairs.html">features and lairs</a> blog post from the OSR Hex Map Generation series following the <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> approach.</p>
+
+<div class="roll-results rpgui-container framed-golden-2" style="width: 100%; position:relative; height:auto; display:inline-block">
+    <h2>Depression details</h2>
+    <input id="elevation-change-reason" placeholder="Why did the elevation change?" style="width: 78%" /> <button onclick="elevationChangeReason('elevation-change-reason')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-amount" placeholder="Lower by how much?" style="width: 78%" /> <button onclick="elevationChangeAmount('elevation-change-amount')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 78%" /> <button onclick="elevationChangeArea('elevation-change-area')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" style="width: 78%" /> <button onclick="elevationChangeDifference('elevation-change-difference')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div style="clear: both;"></div>
 
 <h1 id="game-dev-tools">Game Dev Tools</h1>
 

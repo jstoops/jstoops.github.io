@@ -20,13 +20,13 @@ Here's the steps to setup Worldgrapher for a 15x15 hex map at the WORLD level:
    - _Initial View Level:_ WORLD
    - Select _All one terrain_ and set to: Blank
 
-<img src="../../../images/Worldographer-New-World-Map.jpg" alt="New Worldographer 15x15 hex map settings" />
+<img class="framed" src="../../../images/Worldographer-New-World-Map.jpg" alt="New Worldographer 15x15 hex map settings" />
 
 4. Click **Generate Map**
 5. Add label at World Level with the text "30mi/hex" by selecting Label->New Text Label and clicking on the the map to place it. Make sure only World is checked else it'll appear on every level, not just the World level.
 
-<img src="../../../images/Worldographer-World-Map-Scale-Label-Settings.jpg" alt="World map label settings" /><br>
-<img src="../../../images/Worldographer-World-Map-Scale-Label.jpg" alt="Example World map label" />
+<img class="framed" src="../../../images/Worldographer-World-Map-Scale-Label-Settings.jpg" alt="World map label settings" /><br>
+<img class="framed" src="../../../images/Worldographer-World-Map-Scale-Label.jpg" alt="Example World map label" />
 
 6. Show hex numbers & reduce size:
 
@@ -36,7 +36,7 @@ Here's the steps to setup Worldgrapher for a 15x15 hex map at the WORLD level:
    - Set _Size_ to 12
    - Set _Pre-Pad_ to 10s digit
 
-<img src="../../../images/Worldographer-Configure-Tile-Numbers.jpg" alt="Show hex numbers and configure" />
+<img class="framed" src="../../../images/Worldographer-Configure-Tile-Numbers.jpg" alt="Show hex numbers and configure" />
 
 ## Select Center Atlas-level Hex Terrain
 
@@ -46,7 +46,7 @@ Here's the steps to set the starting location on the World map (known as Atlas-l
 
 1. Select Terrain->Farmland (aka plains in DMG) & click on starting hex, e.g. 08.05, where the campaign will begin
 
-<img src="../../../images/Worldographer-Terrain-Farmland-Plains.jpg" alt="Terrain for plains" />
+<img class="framed" src="../../../images/Worldographer-Terrain-Farmland-Plains.jpg" alt="Terrain for plains" />
 
 2. Select Feature->Building Clanmoot icon (if you right-click on the icon or terrain you can add it to your favorites so easy to find again)
 3. Enter label, e.g. Village of Hommlet
@@ -58,15 +58,15 @@ Here's the steps to set the starting location on the World map (known as Atlas-l
    - Set _Label Style_ to City or Village
    - Make sure World, Continent, Kingdom and Province is checked so feature icon and label appears on every level of the map
 
-<img src="../../../images/Worldographer-Center-Map-Village-Label-Settings.jpg" alt="Starting location feature icon and label settings" />
+<img class="framed" src="../../../images/Worldographer-Center-Map-Village-Label-Settings.jpg" alt="Starting location feature icon and label settings" />
 
 5. Click in starting hex to place feature icon & label for starting settlement, e.g. 08.05
 
-<img src="../../../images/Worldographer-Center-Map-Village-Feature-Icon-Label.jpg" alt="Starting location feature icon and label" />
+<img class="framed" src="../../../images/Worldographer-Center-Map-Village-Feature-Icon-Label.jpg" alt="Starting location feature icon and label" />
 
 ## Generate Surroundings Atlas-level Hex Terrain
 
-Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 174 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that's just 6 tiles.
+Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 173 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that's just 6 tiles.
 
 The tool below allows you to select the starting tile terrain type, "Plains" in this caase, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.
 
@@ -78,7 +78,7 @@ Here's the steps to generate terrain:
    - Depressions & Ponds: retains prior terrain type and apply special marking indicating it's a depression or pond
    - 1 in 10 chance for Hills to include Forests and Forests to include Hills: roll a d10 for each hill and each forest hex to see if they contain both then update hex to represent that (link in step 1 automatically does this for you)
 
-<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 57%; padding-left: 5px; position:relative; height:auto; display:inline-block">
+<div class="roll-results rpgui-container framed-golden-2" style="float:right; width: 52%; padding-left: 5px; position:relative; height:auto; display:inline-block">
    <h2>Generate Terrain</h2>
    <label>Starting Tile:</label>
    <select id="atlas-terrain-type" class="rpgui-dropdown" data-rpguitype="dropdown" style="display: none;">
@@ -95,9 +95,12 @@ Here's the steps to generate terrain:
   <button onClick="generateTerrain(document.getElementById('atlas-terrain-type').value, 6, 'atlas-terrain-rolls', 'atlas-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<img src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" />
+<img class="framed" src="../../../images/Worldographer-Generate-Surrounding-Terrain-World-Level.jpg" alt="Example Atlas-level map with surrounding terrain generated" />
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
+
+<br/>
+_Appendix B – Random Wilderness Terrain_
 
 |                 | Plains | Scrub | Forest | Rough | Desert | Hills | Mountains | Marsh |
 | :-------------- | :---: | :---: | :----: | :---: | :----: | :---: | :-------: | :---: |
@@ -122,7 +125,7 @@ Here's the steps to generate terrain:
     points through mountain to represent pass.
 </pre>
 
-Terrain Guide:
+_Appendix B – Terrain Guide_
 
 - **Plain:** tundra, steppe, savanna, prairie, heath, moor, downs, meadow e.g. _Farmland_ in Worldographer
 - **Scrub:** brush, veldt, bush, thickets, brackens e.g. _Grassland_ in Worldographer
@@ -135,7 +138,7 @@ Terrain Guide:
 - **Pond:** pools, tarn, lake e.g. _Cosmic Planet High Water Medium Temperature_ with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer
 - **Depression:** gorge, rift, valley, canyon e.g. _Symbol Crater_ with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer
 
-Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN table
+Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN
 
 Can continue to build out map at this level, if desired.
 
@@ -150,7 +153,7 @@ Here's the steps to drill into the central hex at the Atlas-level to start creat
 1. In Worldographer, change Level to CONTINENT
 2. Select 5 for _Number of Tiles_ then click **OK**, **OK**
 
-<img src="../../../images/Worldographer-Child-Map-Number-of-Tiles-Settings.jpg" alt="Number of tiles setting for child map" />
+<img class="framed" src="../../../images/Worldographer-Child-Map-Number-of-Tiles-Settings.jpg" alt="Number of tiles setting for child map" />
 
 3. Remove overspill hexes by selecting the Blank terrain then clicking on unwanted hex or holding down left mouse button and moving over them (overspill is any not part of the 6 large hexes surrounding starting large hex)
 4. Add label at Continent Level with the text "6mi/hex"
@@ -193,4 +196,4 @@ Here's the steps to generate the terrain for the times surrounding your starting
    <button onClick="generateTerrain(document.getElementById('sub-terrain-type').value, document.getElementById('sub-terrain-no-hexes').value, 'sub-terrain-rolls', 'sub-terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>

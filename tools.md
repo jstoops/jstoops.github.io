@@ -31,7 +31,7 @@ For more details on how to use see the <a href="2025/07/26/osr-hex-gen-surroundi
     <button onClick="generateTerrain(document.getElementById('terrain-type').value, document.getElementById('no-hexes').value, 'terrain-rolls', 'terrain-types')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
 
 ### Features and Lairs Generation
 
@@ -52,7 +52,23 @@ For more details on how to use see the <a href="2025/07/27/osr-hex-gen-features-
    <button onClick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
+
+#### Flesh Out Features
+
+##### Depressions
+
+For more details on how to use see the <a href="2025/07/27/osr-hex-gen-features-lairs.html">features and lairs</a> blog post from the OSR Hex Map Generation series following the [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks) approach.
+
+<div class="roll-results rpgui-container framed-golden-2" style="width: 100%; position:relative; height:auto; display:inline-block">
+    <h2>Depression details</h2>
+    <input id="elevation-change-reason" placeholder="Why did the elevation change?" style="width: 78%" /> <button onClick="elevationChangeReason('elevation-change-reason')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-amount" placeholder="Lower by how much?" style="width: 78%" /> <button onClick="elevationChangeAmount('elevation-change-amount')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 78%" /> <button onClick="elevationChangeArea('elevation-change-area')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" style="width: 78%" /> <button onClick="elevationChangeDifference('elevation-change-difference')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div style="clear: both;"></div>
 
 # Game Dev Tools
 

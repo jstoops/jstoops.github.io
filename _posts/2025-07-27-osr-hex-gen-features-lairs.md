@@ -29,9 +29,10 @@ Here's the steps to generate feature and lairs:
    <button onClick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
 
-**Table 1.1 – Feature Types**
+<br/>
+_Table 1.1 – Feature Types_
 
 |  d20  | Result     |
 | :---: | :--------- |
@@ -48,7 +49,7 @@ Here's the steps to generate feature and lairs:
 
 Use the figure below to determine the hex numbers for placing the features and lairs.
 
-<img src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" />
+<img class="framed" src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" />
 
 Source: [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks)
 
@@ -62,22 +63,22 @@ Use [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filli
 
 Here's the steps for fleshing out the details of a depression:
 
-1. Why did the elevation change? <a onClick="elevationChangeReason(100, 'elevation-change-reason')">Roll a d100</a>
+1. Why did the elevation change? <a onClick="elevationChangeReason('elevation-change-reason')">Roll a d100</a>
 
    - Use the _Elevation Change Reason Table_ below to determine reason
    - <input id="elevation-change-reason" placeholder="Why did the elevation change?" />
 
-2. Lower by how much? <a onClick="elevationChangeAmount(100, 'elevation-change-amount')">Roll a d100</a>
+2. Lower by how much? <a onClick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a>
 
    - Use the _Elevation Change Amount Table_ below to determine by how much
    - <input id="elevation-change-amount" placeholder="Lower by how much?" />
 
-3. How large is the area with changed terrain? <a onClick="elevationChangeArea(100, 'elevation-change-area')">Roll a d100</a>
+3. How large is the area with changed terrain? <a onClick="elevationChangeArea('elevation-change-area')">Roll a d100</a>
 
    - Use the _Elevation Change Area Table_ below to determine how large an area changed
    - <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" />
 
-4. Is the terrain within the change of elevation different than the surrounds? <a onClick="document.getElementById('elevation-change-difference').value=rollMultipleDice(1, 100)*100">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.
+4. Is the terrain within the change of elevation different than the surrounds? <a onClick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.
 
    - There is a _1-4 in 6 chance_ that the change in elevation represents a differing terrain type than the surrounding environs.
    - This change in terrain will most often (1-4) be within one degree of the surrounding terrain, or (5-6) within two degrees.

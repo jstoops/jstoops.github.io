@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/rpgui.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Hex Gen - Features and Lairs</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -16,14 +16,12 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs." />
 <meta property="og:description" content="After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs." />
-<link rel="canonical" href="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html" />
-<meta property="og:url" content="http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-07-27T00:00:00-10:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Hex Gen - Features and Lairs" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"clanredhead"},"dateModified":"2025-07-27T00:00:00-10:00","datePublished":"2025-07-27T00:00:00-10:00","description":"After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.","headline":"Hex Gen - Features and Lairs","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html"},"url":"http://localhost:4000/2025/07/27/osr-hex-gen-features-lairs.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"clanredhead"},"dateModified":"2025-07-27T00:00:00-10:00","datePublished":"2025-07-27T00:00:00-10:00","description":"After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.","headline":"Hex Gen - Features and Lairs","mainEntityOfPage":{"@type":"WebPage","@id":"/2025/07/27/osr-hex-gen-features-lairs.html"},"url":"/2025/07/27/osr-hex-gen-features-lairs.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -98,9 +96,10 @@
    <button onclick="generateLairs(document.getElementById('no-lairs').value, 'lair-results')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
-<div style="clear: both;" />
+<div style="clear: both;"></div>
 
-<p><strong>Table 1.1 – Feature Types</strong></p>
+<p><br />
+<em>Table 1.1 – Feature Types</em></p>
 
 <table>
   <thead>
@@ -155,7 +154,7 @@
 
 <p>Use the figure below to determine the hex numbers for placing the features and lairs.</p>
 
-<p><img src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
+<p><img class="framed" src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
 
 <p>Source: <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a></p>
 
@@ -171,7 +170,7 @@
 
 <ol>
   <li>
-    <p>Why did the elevation change? <a onclick="elevationChangeReason(100, 'elevation-change-reason')">Roll a d100</a></p>
+    <p>Why did the elevation change? <a onclick="elevationChangeReason('elevation-change-reason')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Reason Table</em> below to determine reason</li>
@@ -179,7 +178,7 @@
     </ul>
   </li>
   <li>
-    <p>Lower by how much? <a onclick="elevationChangeAmount(100, 'elevation-change-amount')">Roll a d100</a></p>
+    <p>Lower by how much? <a onclick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Amount Table</em> below to determine by how much</li>
@@ -187,7 +186,7 @@
     </ul>
   </li>
   <li>
-    <p>How large is the area with changed terrain? <a onclick="elevationChangeArea(100, 'elevation-change-area')">Roll a d100</a></p>
+    <p>How large is the area with changed terrain? <a onclick="elevationChangeArea('elevation-change-area')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Area Table</em> below to determine how large an area changed</li>
@@ -195,7 +194,7 @@
     </ul>
   </li>
   <li>
-    <p>Is the terrain within the change of elevation different than the surrounds? <a onclick="document.getElementById('elevation-change-difference').value=rollMultipleDice(1, 100)*100">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.</p>
+    <p>Is the terrain within the change of elevation different than the surrounds? <a onclick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.</p>
 
     <ul>
       <li>There is a <em>1-4 in 6 chance</em> that the change in elevation represents a differing terrain type than the surrounding environs.</li>
