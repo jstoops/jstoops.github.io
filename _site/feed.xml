@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-28T12:16:45-10:00</updated><id>/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-28T18:55:31-10:00</updated><id>/feed.xml</id><entry><title type="html">Hex Gen - Features and Lairs</title><link href="/2025/07/27/osr-hex-gen-features-lairs.html" rel="alternate" type="text/html" title="Hex Gen - Features and Lairs" /><published>2025-07-27T00:00:00-10:00</published><updated>2025-07-27T00:00:00-10:00</updated><id>/2025/07/27/osr-hex-gen-features-lairs</id><content type="html" xml:base="/2025/07/27/osr-hex-gen-features-lairs.html"><![CDATA[<p>After generating the hexes for the <a href="2025-07-26-osr-hex-gen-surrounding-area.html">surrounding area</a> you need to determine features, locations &amp; lairs.</p>
 
 <p>Use Table 1.1 – Feature Types on page 7 and Figure One - Placing Lairs Features on page 5 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a> to add additional, interesting features to the core hex. 1d6 features and 1d6 lairs in each 6-mile hex seems too dense, therefore, instead of every 6-mile hex up it a level so do every 30-mile hex has 6 features and 5 lairs, i.e. the entire large hex at the Sub-level. Feel free to adjust these numbers or roll to randomize the number per 30-mile hex.</p>
 
@@ -84,11 +84,11 @@
 
 <p>Use the figure below to determine the hex numbers for placing the features and lairs.</p>
 
-<p><img class="framed" src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
+<p><img class="framed" src="../../../images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" /></p>
 
 <p>Source: <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a></p>
 
-<h3 id="flesh-out-features">Flesh Out Features</h3>
+<h3 id="flesh-out-the-features">Flesh Out the Features</h3>
 
 <p>For each feature generated determine the details for it using the Features section on pages 6-8 of <a href="https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks">Filling in the Blanks</a>.</p>
 
@@ -128,7 +128,7 @@
 
     <ul>
       <li>There is a <em>1-4 in 6 chance</em> that the change in elevation represents a differing terrain type than the surrounding environs.</li>
-      <li>This change in terrain will most often (1-4) be within one degree of the surrounding terrain, or (5-6) within two degrees.</li>
+      <li>If a difference in terrain will most often be within one degree of the surrounding terrain, or within two degrees. There could also be an unusual feature or magically created terrain, see <em>Degree of Change in Terrain Table</em> for details.</li>
       <li>If one degree of change then roll a d3 (or d6/2)</li>
       <li><input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" /></li>
     </ul>
@@ -351,29 +351,7 @@ Rock Formations p14</p>
   <li>Roll d30 on RG1 to determine type of ruins</li>
   <li>Roll d30 on RG2 to determine character of ruin/decay &amp; degree</li>
   <li>Describe ruins in hex notes</li>
-</ol>
-
-<h2 id="7-determine-settlements">7. Determine Settlements</h2>
-
-<p>Use <a href="./Resources/Rules/d30_Sandbox_Companion.pdf">D30 Sandbox Companion</a> IPD: INHABITATION BY POPULATION DENSITY table on p20 to determine density of population. Each hex has a 1 in 3 chance of having a settlement and the density will determine if there actually is a settlement.</p>
-
-<p>Density for this map are: Frontier</p>
-
-<p>Steps:</p>
-
-<ol>
-  <li>Open <a href="https://docs.google.com/spreadsheets/d/1C-7wzWaNHMVVr-sSvk1lJImEKx9R6gpx/edit?usp=sharing&amp;ouid=112939477498268066745&amp;rtpof=true&amp;sd=true">Hex Population Excel</a></li>
-  <li>Select <em>Subhex Population</em> tab</li>
-  <li>Set predominate terrain type in M2 from Atlas-level hex, e.g. Plains, &amp; population density, e.g. Frontier</li>
-  <li>Update the V4 cell to re-run the random number generators</li>
-  <li>Copy the randomly generated settlement &amp; settlement type numbers (S5:T35)</li>
-  <li>Select first cell under Settlement? Random (E5) then right-click on selection then select Past special-&gt;Values only</li>
-  <li>Using the figure for hex numbers 1-31 find the hex for each Subhex # with Settlement of Maybe &amp; add an icon, e.g. Building Cottage or Settlement City Ruined, with a label for the Type</li>
-</ol>
-
-<h3 id="generate-settlement-names">Generate Settlement Names</h3>
-
-<p>Use something like <a href="https://donjon.bin.sh/fantasy/name/#type=set;set=city">Don Jon’s Fantasy Name Generator</a></p>]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.]]></summary></entry><entry><title type="html">Hex Gen - The Surrounding Area</title><link href="/2025/07/26/osr-hex-gen-surrounding-area.html" rel="alternate" type="text/html" title="Hex Gen - The Surrounding Area" /><published>2025-07-26T00:00:00-10:00</published><updated>2025-07-26T00:00:00-10:00</updated><id>/2025/07/26/osr-hex-gen-surrounding-area</id><content type="html" xml:base="/2025/07/26/osr-hex-gen-surrounding-area.html"><![CDATA[<p>Once you’ve got your <a href="2025-07-25-osr-hex-gen-gygax-challenge.html">concept and pitch</a> figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.</p>
+</ol>]]></content><author><name>clanredhead</name></author><summary type="html"><![CDATA[After generating the hexes for the surrounding area you need to determine features, locations &amp; lairs.]]></summary></entry><entry><title type="html">Hex Gen - The Surrounding Area</title><link href="/2025/07/26/osr-hex-gen-surrounding-area.html" rel="alternate" type="text/html" title="Hex Gen - The Surrounding Area" /><published>2025-07-26T00:00:00-10:00</published><updated>2025-07-26T00:00:00-10:00</updated><id>/2025/07/26/osr-hex-gen-surrounding-area</id><content type="html" xml:base="/2025/07/26/osr-hex-gen-surrounding-area.html"><![CDATA[<p>Once you’ve got your <a href="2025-07-25-osr-hex-gen-gygax-challenge.html">concept and pitch</a> figured out you’ll need to start creating your hex map, one settlement of significant size where your players start out (e.g. The Village of Hommlet), at least 2 other settlements, other major terrain feature, a mysterious site to explore (e.g. The Moathouse), a dungeon entrance, and a random encounter table for the area.</p>
 
 <blockquote>
   <p>”[…] sitting down with a large piece of hex ruled paper and drawing a large scale map. A map with a scale of 1 hex = 1 mile will be about right for player operations such as exploring, camping, adventuring, and eventually building their strongholds. Even such small things as a witch’s hut and side entrances to the dungeon can be shown on the map. The central features of the map must be the major town and the dungeon entrance.” – E.G.G.</p>

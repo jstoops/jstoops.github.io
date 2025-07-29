@@ -49,11 +49,11 @@ _Table 1.1 – Feature Types_
 
 Use the figure below to determine the hex numbers for placing the features and lairs.
 
-<img class="framed" src="../../../Images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" />
+<img class="framed" src="../../../images/Filling-in-the-Blanks-Hex-Numbers-1-100.jpg" alt="Hex numbering for d100" />
 
 Source: [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks)
 
-### Flesh Out Features
+### Flesh Out the Features
 
 For each feature generated determine the details for it using the Features section on pages 6-8 of [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks).
 
@@ -81,7 +81,7 @@ Here's the steps for fleshing out the details of a depression:
 4. Is the terrain within the change of elevation different than the surrounds? <a onClick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.
 
    - There is a _1-4 in 6 chance_ that the change in elevation represents a differing terrain type than the surrounding environs.
-   - This change in terrain will most often (1-4) be within one degree of the surrounding terrain, or (5-6) within two degrees.
+   - If a difference in terrain will most often be within one degree of the surrounding terrain, or within two degrees. There could also be an unusual feature or magically created terrain, see _Degree of Change in Terrain Table_ for details.
    - If one degree of change then roll a d3 (or d6/2) 
    - <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" />
 
@@ -201,24 +201,3 @@ Steps:
 1. Roll d30 on RG1 to determine type of ruins
 2. Roll d30 on RG2 to determine character of ruin/decay & degree
 3. Describe ruins in hex notes
-
-## 7. Determine Settlements
-
-Use [D30 Sandbox Companion](./Resources/Rules/d30_Sandbox_Companion.pdf) IPD: INHABITATION BY POPULATION DENSITY table on p20 to determine density of population. Each hex has a 1 in 3 chance of having a settlement and the density will determine if there actually is a settlement.
-
-Density for this map are: Frontier
-
-Steps:
-
-1. Open [Hex Population Excel](https://docs.google.com/spreadsheets/d/1C-7wzWaNHMVVr-sSvk1lJImEKx9R6gpx/edit?usp=sharing&ouid=112939477498268066745&rtpof=true&sd=true)
-2. Select _Subhex Population_ tab
-3. Set predominate terrain type in M2 from Atlas-level hex, e.g. Plains, & population density, e.g. Frontier
-4. Update the V4 cell to re-run the random number generators
-5. Copy the randomly generated settlement & settlement type numbers (S5:T35)
-6. Select first cell under Settlement? Random (E5) then right-click on selection then select Past special->Values only
-7. Using the figure for hex numbers 1-31 find the hex for each Subhex # with Settlement of Maybe & add an icon, e.g. Building Cottage or Settlement City Ruined, with a label for the Type
-
-### Generate Settlement Names
-
-Use something like [Don Jon's Fantasy Name Generator](https://donjon.bin.sh/fantasy/name/#type=set;set=city)
-

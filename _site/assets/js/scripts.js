@@ -335,23 +335,249 @@ function elevationChangeArea(displayElement) {
 }
 
 const elevationChangeDegreeRanges = [
-  { min: 1, max: 4, text: "Within one degree of surrounding terrain" },
-  { min: 5, max: 6, text: "Within two degrees of surrounding terrain" }
+  { min: 1, max: 50, text: "Within one degree of surrounding terrain" },
+  { min: 51, max: 85, text: "Within two degrees of surrounding terrain" },
+  { min: 86, max: 95, text: "UNUSUAL" },
+  { min: 96, max: 100, text: "Magical/magically created terrain" }
 ];
+
+const unusualFeatureTerrainRanges = [
+  { min: 1, max: 10, text: "Glacier" },
+  { min: 11, max: 20, text: "HOTSPRINGS" },
+  { min: 21, max: 30, text: "Landlocked sand dunes" },
+  { min: 31, max: 40, text: "Mudflats" },
+  { min: 41, max: 50, text: "Other - Referee's choice" },
+  { min: 51, max: 60, text: "Petrified forest" },
+  { min: 61, max: 70, text: "ROCK" }
+];
+
+const hotSpringsDamageRanges = [
+  { min: 1, max: 3, text: "1 point of" },
+  { min: 4, max: 5, text: "1d4 points of" },
+  { min: 6, max: 6, text: "1d6 points of" }
+];
+
+function hotSprings(displayElement) {
+  const output = document.getElementById(displayElement);
+  var text = "Hot springs";
+  result = rollDice(6);
+  if (result < 5) {
+      text += " with strong smell of sulfur"
+  }
+  result = rollDice(6);
+  if (result == 1) {
+    text += "and are unbearably hot, inflicting ";
+    result = rollDice(6);
+    for (const range of hotSpringsDamageRanges) {
+      if (result >= range.min && result <= range.max) {
+        text += range.text + " damage every round";
+        output.value = text;
+        return;
+      }
+    }
+  }
+  output.value = text;
+}
+
+const rocksTypeRanges = [
+  { min: 1, max: 35, text: "A number of smaller rocks with avg. diameter of ", diameterNoDice: 1, diameterNoSides: 6, densityNoDice: 3, densityNoSides: 10, densityAreaNoDice: 1, densityAreaNoSides: 20, densityAreaMultiplier: 100 },
+  { min: 36, max: 70, text: "A smaller number of larger rocks with avg. diameter of ", diameterNoDice: 3, diameterNoSides: 6, densityNoDice: 1, densityNoSides: 4, densityAreaNoDice: 1, densityAreaNoSides: 20, densityAreaMultiplier: 100 },
+  { min: 71, max: 100, text: "OUTCROPPING", diameterNoDice: 0, diameterNoSides: 0, densityNoDice: 1, densityNoSides: 6, densityAreaNoDice: 1, densityAreaNoSides: 4, densityAreaMultiplier: 0 }
+]
+
+const rocksOutcroppingSizeRanges = [
+  { min: 1, max: 25, text: "(approx. 75 feet to a side)", noDice: 1, noSides: 10, multiplier: 1000, modifier: 0 },
+  { min: 26, max: 50, text: "(approx. 230 feet to a side)", noDice: 1, noSides: 10, multiplier: 10000, modifier: 0 },
+  { min: 51, max: 70, text: "(approx. 715 feet to a side)", noDice: 1, noSides: 10, multiplier: 100000, modifier: 0 },
+  { min: 71, max: 80, text: "(2,400 feet to a side)", noDice: 1, noSides: 10, multiplier: 1000000, modifier: 0 },
+  { min: 81, max: 89, text: "subhex", noDice: 0, noSides: 0, multiplier: 1, modifier: 1 },
+  { min: 90, max: 94, text: "subhexes", noDice: 1, noSides: 4, multiplier: 1, modifier: 1 },
+  { min: 95, max: 97, text: "subhexes", noDice: 3, noSides: 8, multiplier: 1, modifier: 1 },
+  { min: 98, max: 99, text: "hex", noDice: 0, noSides: 0, multiplier: 1, modifier: 1 },
+  { min: 100, max: 100, text: "hexes", noDice: 1, noSides: 4, multiplier: 1, modifier: 1 }
+]
+
+const rocksAresRanges = [
+  { min: 1, max: 32, text: "square feet", noDice: 1, noSides: 4, multiplier: 100},
+  { min: 33, max: 50, text: "square feet", noDice: 2, noSides: 6, multiplier: 500},
+  { min: 51, max: 65, text: "square feet", noDice: 3, noSides: 8, multiplier: 1000},
+  { min: 66, max: 80, text: "square feet", noDice: 4, noSides: 10, multiplier: 10000},
+  { min: 81, max: 90, text: "subhexes", noDice: 1, noSides: 4, multiplier: 1},
+  { min: 91, max: 95, text: "subhexes", noDice: 3, noSides: 6, multiplier: 1},
+  { min: 96, max: 99, text: "subhexes", noDice: 4, noSides: 8, multiplier: 1},
+  { min: 100, max: 100, text: "hexes", noDice: 1, noSides: 4, multiplier: 1}
+]
+
+function rockyTerrain() {
+  text = "";
+  result = rollDice(100);
+  for (const range of rocksTypeRanges) {
+    if (result >= range.min && result <= range.max) {
+      if (range.text == "OUTCROPPING") {
+        text = "An outcropping of rock ";
+        result = rollDice(100);
+        for (const range of rocksTypeRanges) {
+          if (result >= range.min && result <= range.max) {
+            if (range.text.includes("hex")) {
+              text += " occupying ";
+              if (range.noDice > 0) {
+                result = (rollMultipleDice(range.noDice, range.noSides)*range.multiplier)+range.modifier;
+              } else {
+                result = range.modifier;
+              }
+              text += result + " " + range.text;
+              return text;
+            } else {
+              result = (rollMultipleDice(range.noDice, range.noSides)*range.multiplier)+range.modifier;
+              text += result + " square feet " + range.text;
+              return text;
+            }
+          }
+        }
+      } else {
+        result = rollMultipleDice(range.noDice, range.noSides)*range.multiplier;
+        text += range.text + result + " square feet.";
+        return text;
+      }
+    }
+  }
+  return "Unknown";
+}
+
+const rocksNaturallyOccurringRanges = [
+  { min: 1, max: 60, text: "Naturally occurring." },
+  { min: 61, max: 95, text: "Naturally occurring, but not usually found in the area." },
+  { min: 96, max: 100, text: "Not naturally occurring." }
+]
+
+function rocksNaturallyOccurring() {
+  result = rollDice(100);
+  for (const range of rocksNaturallyOccurringRanges) {
+    if (result >= range.min && result <= range.max) {
+      return range.text;
+    }
+  }
+  return "Unknown";
+}
+
+const rockWritingRanges = [
+  { min: 1, max: 1, text: "Is meaningless, obscene or pornographic graffiti." },
+  { min: 2, max: 2, text: "FORMULA" },
+  { min: 3, max: 3, text: "PROPHECY" },
+  { min: 4, max: 4, text: "MAP" },
+  { min: 5, max: 5, text: "CREVICE" },
+  { min: 6, max: 6, text: "HISTORY" },
+  { min: 7, max: 7, text: "WARNING" },
+  { min: 8, max: 8, text: "MESSAGE" },
+  { min: 9, max: 9, text: "LETTERS" },
+  { min: 10, max: 10, text: "Referee's choice." }
+]
+
+const treasureMapRanges = [
+  { min: 1, max: 3, text: "1 magic item.", item1NoDice: 0, item1NoSides: 0, item1Multiplier: 0, item2NoDice: 0, item2NoSides: 6, item2Multiplier: 0},
+  { min: 4, max: 5, text: "ITEM1 gems and ITEM2 pieces of jewelry.", item1NoDice: 1, item1NoSides: 6, item1Multiplier: 10, item2NoDice: 2, item2NoSides: 10, item2Multiplier: 1}
+]
+
+function rocksUnusual() {
+  result = rollDice(6);
+  text = "";
+  itemValue = 0;
+  if (result < 4) {
+    text = "The rocks have been written on with ";
+    result = rollDice(10);
+    for (const range of rockWritingRanges) {
+      if (result >= range.min && result <= range.max) {
+        result = rollDice(6);
+        switch (range.text) {
+          case "FORMULA":
+            if (result < 5) {
+              text = "spell";
+            } else {
+              text = "magical item";
+            }
+            return "Contains the formula to a " + text + ". It takes " + rollDice(8) + " weeks plus one day per additional stone containing the writing to decipher and understand what is scribed upon it."
+          case "PROPHECY":
+            if (result < 5) {
+              text = "a prophecy, concerning events that are yet to come.";
+            } else {
+              text = "a prophecy, concerning events that have already passed.";
+            }
+            result = rollDice(6);
+            if (result < 3) {
+              text += " The prophecy is wrong."
+            }
+            return text;
+          case "MAP":
+            if (result < 3) {
+              text += "a treasure map leading to ";
+              for (const range of treasureMapRanges) {
+                if (result >= range.min && result <= range.max) {
+                  text += range.text;
+                  if (range.item1NoDice != 0) {
+                    itemValue = rollMultipleDice(range.item1NoDice, range.item1NoSides)*range.item1Multiplier;
+                    text = text.replace("ITEM1", itemValue);
+                    if (range.item2NoDice != 0) {
+                      itemValue = rollMultipleDice(range.item2NoDice, range.item2NoSides)*range.item2Multiplier;
+                      text = text.replace("ITEM2", itemValue);
+                    }
+                  }
+                  return text;
+                }
+              }
+            } else if (result < 5) {
+              return text + " a map of the surrounding area.";
+            } else if (result == 5) {
+              result = rollDice(6);
+              if (result < 3) {
+                return text + " a map to an undiscovered/unknown area in another plane or dimension.";
+              } else if (result == 6) {
+                return text + " a map of a dungeon.";
+              } else {
+                return text + " a map to an undiscovered/unknown area.";
+              }
+            }
+
+          default:
+            return range.text;
+        }
+      }
+    }
+  } else if (result < 6) {
+    text = "The rocks are arranged in a specific pattern.";
+  } else {
+    text = "The Rocks are magical.";
+  }
+}
 
 function elevationChangeDifference(displayElement) {
   const output = document.getElementById(displayElement);
-  const noSides = 6;
-  result = rollDice(noSides);
+  result = rollDice(6);
   if (result > 5) {
     output.value = "No difference";
     return;
   }
-  result = rollDice(noSides);
+  result = rollDice(100);
   for (const range of elevationChangeDegreeRanges) {
     if (result >= range.min && result <= range.max) {
-      output.value = range.text;
-      return;
+      if (range.text == "UNUSUAL") {
+        result = rollDice(100);
+        for (const range of unusualFeatureTerrainRanges) {
+          if (result >= range.min && result <= range.max) {
+            if (range.text == "HOTSPRINGS") {
+              hotSprings(displayElement);
+              return;
+            } else if (range.text == "ROCK") {
+              output.value = "Type of rocky terrain? " + rockyTerrain() + "\nNaturally occurring? " + rocksNaturallyOccurring() + "\nSomething unusual about the rocks? " + rocksUnusual();
+            } else {
+              output.value = range.text;
+              return;
+            }
+          }
+        }
+      } else {
+        output.value = range.text;
+        return;
+      }
     }
   }
   output.value = "Unknown";
