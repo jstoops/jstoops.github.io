@@ -66,7 +66,19 @@ For more details on changes in elevation see the Depressions section of Flesh Ou
     <input id="elevation-change-higher-lower" placeholder="Is the elevation higher or lower than the surrounding land?" style="width: 78%" /> <button onClick="elevationChangeHigherLower('elevation-change-higher-lower')" class="rpgui-button" type="button"><p>Re-roll</p></button>
     <input id="elevation-change-amount" placeholder="Higher or lower by how much?" style="width: 78%" /> <button onClick="elevationChangeAmount('elevation-change-amount')" class="rpgui-button" type="button"><p>Re-roll</p></button>
     <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 78%" /> <button onClick="elevationChangeArea('elevation-change-area')" class="rpgui-button" type="button"><p>Re-roll</p></button>
-    <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" style="width: 78%" /> <button onClick="elevationChangeDifference('elevation-change-difference')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <textarea id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" rows="5"></textarea> <button onClick="elevationChangeDifference('elevation-change-difference')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div style="clear: both;"></div>
+
+#### Other Terrain Features
+<div class="roll-results rpgui-container framed-golden-2" style="width: 100%; position:relative; height:auto; display:inline-block">
+    <h2>Other Terrain Features</h2>
+    <input id="rocky-terrain" placeholder="Type of rocky terrain?" style="width: 78%" /> <button onClick="document.getElementById('rocky-terrain').value=rockyTerrain()" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="natural-rock-formation" placeholder="Naturally occurring rock formation?" style="width: 78%" /> <button onClick="document.getElementById('natural-rock-formation').value=rocksNaturallyOccurring()" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <textarea id="unusual-rocks" placeholder="Something unusual about the rocks?" rows="5"></textarea> <button onClick="document.getElementById('unusual-rocks').value=rocksUnusual()" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <br/>
+    <input id="hot-springs" placeholder="Hotsprings" style="width: 78%" /> <button onClick="hotSprings('hot-springs')" class="rpgui-button" type="button"><p>Re-roll</p></button>
 </div>
 
 <div style="clear: both;"></div>

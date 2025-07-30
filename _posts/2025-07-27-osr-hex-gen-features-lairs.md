@@ -63,27 +63,24 @@ Use [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filli
 
 Here's the steps for fleshing out the details of a depression:
 
-1. Why did the elevation change? <a onClick="elevationChangeReason('elevation-change-reason')">Roll a d100</a>
+1. <input id="elevation-change-reason" placeholder="Why did the elevation change?" /> <a onClick="elevationChangeReason('elevation-change-reason')">Roll a d100</a>
 
    - Use the _Elevation Change Reason Table_ below to determine reason
-   - <input id="elevation-change-reason" placeholder="Why did the elevation change?" />
 
-2. Lower by how much? <a onClick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a>
+2. <input id="elevation-change-amount" placeholder="Lower by how much?" /> <a onClick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a>
 
    - Use the _Elevation Change Amount Table_ below to determine by how much
-   - <input id="elevation-change-amount" placeholder="Lower by how much?" />
 
-3. How large is the area with changed terrain? <a onClick="elevationChangeArea('elevation-change-area')">Roll a d100</a>
+3. <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 70%" /> <a onClick="elevationChangeArea('elevation-change-area')">Roll a d100</a>
 
    - Use the _Elevation Change Area Table_ below to determine how large an area changed
-   - <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" />
 
 4. Is the terrain within the change of elevation different than the surrounds? <a onClick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.
+   <textarea id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" rows="5"></textarea>
 
    - There is a _1-4 in 6 chance_ that the change in elevation represents a differing terrain type than the surrounding environs.
    - If a difference in terrain will most often be within one degree of the surrounding terrain, or within two degrees. There could also be an unusual feature or magically created terrain, see _Degree of Change in Terrain Table_ for details.
-   - If one degree of change then roll a d3 (or d6/2) 
-   - <input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" />
+   - If one degree of change then roll a d3 (or d6/2)
 
 5. Describe depression in hex notes and update label with depression type
 
@@ -153,7 +150,7 @@ Use [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filli
 
 Here's the steps for fleshing out the details of a resource:
 
-1. Exceptional resource? <a onClick="resourceExceptionalValue(20, 'resource-exceptional-value')">Roll a d20</a>
+1. Exceptional resource? <a onClick="resourceExceptionalValue('resource-exceptional-value')">Roll a d20</a>
 
    - There's a 1 in 20 chance that the resource is exceptional. If it is, roll a d8.
    - It's worth 25% more on a 1-3, 50% more on a 4-5, 75% more on a 6-7, or 100% more on an 8 than the base value.
@@ -182,22 +179,3 @@ Steps:
 
 Use [Filling in the Blanks](./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf) under 2. Geologic on p. 48-56.
 Rock Formations p14
-## 6. Determine Lair Location & Occupants
-
-Use APPENDIX C: RANDOM MONSTER ENCOUNTERS tables for appropriate conditions and area of [DMG](./Resources/Rules/Dungeon-Masters-Guide-1E.pdf) to determine occupants of lairs, e.g. for this map Temperate And Sub-Tropical Conditions in Uninhabited/Wilderness Areas on p. 184.
-
-1. Roll d100 for pre-dominate terrain for each lair
-2. In Worldographer, update label for each lair with creature type
-3. Roll on sub tables, if necessary
-
-### Generate ruins
-
-Use Ruins Generator tables in [D30 Sandbox Companion](https://www.drivethrurpg.com/en/product/124392/d30-sandbox-companion) on p. 21.
-
-d30: https://rolladie.net/roll-a-d30-die
-
-Steps:
-
-1. Roll d30 on RG1 to determine type of ruins
-2. Roll d30 on RG2 to determine character of ruin/decay & degree
-3. Describe ruins in hex notes

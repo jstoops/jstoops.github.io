@@ -170,42 +170,36 @@
 
 <ol>
   <li>
-    <p>Why did the elevation change? <a onclick="elevationChangeReason('elevation-change-reason')">Roll a d100</a></p>
+    <p><input id="elevation-change-reason" placeholder="Why did the elevation change?" /> <a onclick="elevationChangeReason('elevation-change-reason')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Reason Table</em> below to determine reason</li>
-      <li><input id="elevation-change-reason" placeholder="Why did the elevation change?" /></li>
     </ul>
   </li>
   <li>
-    <p>Lower by how much? <a onclick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a></p>
+    <p><input id="elevation-change-amount" placeholder="Lower by how much?" /> <a onclick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Amount Table</em> below to determine by how much</li>
-      <li><input id="elevation-change-amount" placeholder="Lower by how much?" /></li>
     </ul>
   </li>
   <li>
-    <p>How large is the area with changed terrain? <a onclick="elevationChangeArea('elevation-change-area')">Roll a d100</a></p>
+    <p><input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 70%" /> <a onclick="elevationChangeArea('elevation-change-area')">Roll a d100</a></p>
 
     <ul>
       <li>Use the <em>Elevation Change Area Table</em> below to determine how large an area changed</li>
-      <li><input id="elevation-change-area" placeholder="How large is the area with changed terrain?" /></li>
     </ul>
   </li>
-  <li>
-    <p>Is the terrain within the change of elevation different than the surrounds? <a onclick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.</p>
+  <li>Is the terrain within the change of elevation different than the surrounds? <a onclick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.
+    <textarea id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" rows="5"></textarea>
 
     <ul>
       <li>There is a <em>1-4 in 6 chance</em> that the change in elevation represents a differing terrain type than the surrounding environs.</li>
       <li>If a difference in terrain will most often be within one degree of the surrounding terrain, or within two degrees. There could also be an unusual feature or magically created terrain, see <em>Degree of Change in Terrain Table</em> for details.</li>
       <li>If one degree of change then roll a d3 (or d6/2)</li>
-      <li><input id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" /></li>
     </ul>
   </li>
-  <li>
-    <p>Describe depression in hex notes and update label with depression type</p>
-  </li>
+  <li>Describe depression in hex notes and update label with depression type</li>
 </ol>
 
 <p><em>Elevation Change Reason Table</em></p>
@@ -365,7 +359,7 @@
 
 <ol>
   <li>
-    <p>Exceptional resource? <a onclick="resourceExceptionalValue(20, 'resource-exceptional-value')">Roll a d20</a></p>
+    <p>Exceptional resource? <a onclick="resourceExceptionalValue('resource-exceptional-value')">Roll a d20</a></p>
 
     <ul>
       <li>There’s a 1 in 20 chance that the resource is exceptional. If it is, roll a d8.</li>
@@ -399,29 +393,6 @@
 
 <p>Use <a href="./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf">Filling in the Blanks</a> under 2. Geologic on p. 48-56.
 Rock Formations p14</p>
-<h2 id="6-determine-lair-location--occupants">6. Determine Lair Location &amp; Occupants</h2>
-
-<p>Use APPENDIX C: RANDOM MONSTER ENCOUNTERS tables for appropriate conditions and area of <a href="./Resources/Rules/Dungeon-Masters-Guide-1E.pdf">DMG</a> to determine occupants of lairs, e.g. for this map Temperate And Sub-Tropical Conditions in Uninhabited/Wilderness Areas on p. 184.</p>
-
-<ol>
-  <li>Roll d100 for pre-dominate terrain for each lair</li>
-  <li>In Worldographer, update label for each lair with creature type</li>
-  <li>Roll on sub tables, if necessary</li>
-</ol>
-
-<h3 id="generate-ruins">Generate ruins</h3>
-
-<p>Use Ruins Generator tables in <a href="https://www.drivethrurpg.com/en/product/124392/d30-sandbox-companion">D30 Sandbox Companion</a> on p. 21.</p>
-
-<p>d30: https://rolladie.net/roll-a-d30-die</p>
-
-<p>Steps:</p>
-
-<ol>
-  <li>Roll d30 on RG1 to determine type of ruins</li>
-  <li>Roll d30 on RG2 to determine character of ruin/decay &amp; degree</li>
-  <li>Describe ruins in hex notes</li>
-</ol>
 
 
   <hr>
