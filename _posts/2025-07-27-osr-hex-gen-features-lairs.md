@@ -64,17 +64,8 @@ Use [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filli
 Here's the steps for fleshing out the details of a depression:
 
 1. <input id="elevation-change-reason" placeholder="Why did the elevation change?" /> <a onClick="elevationChangeReason('elevation-change-reason')">Roll a d100</a>
-
-   - Use the _Elevation Change Reason Table_ below to determine reason
-
 2. <input id="elevation-change-amount" placeholder="Lower by how much?" /> <a onClick="elevationChangeAmount('elevation-change-amount')">Roll a d100</a>
-
-   - Use the _Elevation Change Amount Table_ below to determine by how much
-
 3. <input id="elevation-change-area" placeholder="How large is the area with changed terrain?" style="width: 70%" /> <a onClick="elevationChangeArea('elevation-change-area')">Roll a d100</a>
-
-   - Use the _Elevation Change Area Table_ below to determine how large an area changed
-
 4. Is the terrain within the change of elevation different than the surrounds? <a onClick="elevationChangeDifference('elevation-change-difference')">Roll a d6</a> and if less than 5 then roll a d6 to see by how many degrees it changes.
    <textarea id="elevation-change-difference" placeholder="Is the terrain different than the surrounds?" rows="5"></textarea>
 
@@ -83,64 +74,6 @@ Here's the steps for fleshing out the details of a depression:
    - If one degree of change then roll a d3 (or d6/2)
 
 5. Describe depression in hex notes and update label with depression type
-
-_Elevation Change Reason Table_
-
-| :---: | :-------------------------------------------------------------------------------------------------- |
-|  1-75 | The change is natural, the result of time and the elements. |
-| 76-90 | The change is natural but out of place or the result of natural violence; a rock formation that does not belong in the area, a gorge formed not by the slow erosion from a river but an active fault line, etc. It could also be a crater left by, say, a meteor. |
-| 91-96 | The change is unnatural but clearly the work of years of physical labor. |
-| 97-99 | The change is unnatural and clearly the work of magic. |
-|  100  | Referee's choice |
-
-_Elevation Change Amount Table_
-
-| :------: | :-------------------------------------------------------------------- |
-|   1-60   | The land is 5d20 yards lower or higher than the surrounding area.     |
-|  61-75   | The land is 1d6x100 yards lower or higher than the surrounding area.  |
-|  76-100  | The land is 1d20x100 yards lower or higher than the surrounding area. |
-
-_Elevation Change Area Table_
-
-| :------: | :---------------- |
-|   1-35   | a single subhex   |
-|  36-70   | 1d4+1 subhexes    |
-|  71-85   | 3d4 subhexes      |
-|  86-98   | 4d8 subhexes      |
-|  99-100  | 1d4+1 total hexes |
-
-_Degree of Change in Terrain Table_
-
-| :------: | :-------------------------------------------------------------------- |
-|   1-50  | **Within one degree.** The basic terrain type remains the same, with a slight change. For instance, farmland, grazing land, grasslands, shrublands and savannas are all flat, relatively treeless terrains that are within one degree of one another. Likewise, a hill could be barren, grassy, or forested and still be within one degree of the basic “hill” type. |
-|  51-85  | **Within two degrees.** An area of a grasslands hex could be hilly, or an area of a hilly hex could be mountainous, but a mountain still wouldn't be found in the middle of a flat plain. |
-|  86-95  | **Unusual.** This is an unusual feature that is non-magical in nature but rarely seen. Roll 1d100 on the _Unusual Feature Terrain Table_ below to determine the actual feature. If the existing terrain doesn't fit with the feature, roll again. |
-|   100   | **Magical/magically created terrain.** This category includes things like fungal forests, fields of flowers that magically put those walking through them to sleep, areas where gravity is increased or decreased, etc. The terrain itself could have a magical effect — for instance, it could be a null-magic zone, where no magic functions — or it could be obviously magically created, such as an entire hex where the ground has been turned into bright green glass. Regardless, the terrain type here is both clearly out of place and clearly artificial/magical in nature. |
-
-_Unusual Feature Terrain Table_
-
-| :------: | :-------------------------------------------------------------------- |
-|   1-10   | **Glacier.** A mass of densely packed, slowly moving snow. Those on the glacier have their movement reduced by 1/2, suffer the same risk of sun-blindness as on a salt flat, and have a 1 in 6 chance of encountering a hazard for each subhex they enter on the glacier (most likely a crevasse or a sinkhole). |
-|  11-20   | **Hot springs.** The water is heated by geothermal means and is often (1-4 in 6) accompanied by a strong smell of sulfur. It will rarely (1 in 6) be unbearably hot, inflicting (1-3) 1, (4-5) 1d4, or (6) 1d6 points of damage for every round someone not immune to fire damage is within. If it is hot enough to inflict damage there's a 1-2 in 6 chance it is actually a geyser (see _Geyser_ below). |
-|  21-30   | **Landlocked sand dunes.** All that remains of an ancient, land-locked sea or ocean. Treat as desert. |
-|  31-40   | **Mudflats.** A stretch of barren clay that cracks when it dries. When wet, it becomes slick and difficult to traverse. Reduce movement by 1/2 when traveling through a wet mudflat.
-|  41-50   | **Other.** |
-|  51-60   | **Petrified forest.** The remains of an ancient forest can be found here, the trees turned to stone. There's only a 1 in 6 chance the trees are actually standing, otherwise they are lying on the ground.
-|  61-70   | **Rock Formations.** Unusual rock formations dot the landscape: towers of stone such as the Devil's Tower in Wyoming or the Stone Forest in China, or unusual boulder deposits. See the **Geologic** section. |
-
-_Geyser_
-
-- There will be (1-3) one geyser, (4-5) 2d4, or (6) 3d8 spread throughout the subhex, with an additional 1 in 6 chance this feature occurs over 1d20 subhexes.
-- Geysers are pools of extremely hot (1-4) water or (5-6) mud.
-- There's only a 1 in 6 chance the pool will be cool enough (relatively) that individuals can enter it without suffering damage; otherwise someone not resistant to fire will suffer 1d6 points of damage for every round they're within the pool.
-- Geysers erupt every (1) 1d6 hours, (2-3) 1d8 days, (4-5) 1d4 weeks, (6) 1d4 months.
-- If this is generated as a triggered hazard, assume they erupt upon the adventurers first entering the subhex, with subsequent eruptions occurring on a regular basis thereafter.
-- Boiling water (or mud) is spread over a radius of (1-3) 1d20 yards, (4-5) 5d20 yards, or (6) 10d100 yards (reduce ranges for mud eruptions by half), inflicting (1-3) 1d6, (4-5) 2d6, or (6) 3d6 points of damage.
-- If it is a mud eruption, it inflicts half the initial damage in the round after the eruption.
-- A save versus breath reduces the damage by half.
-- A geyser will erupt for (1-3) 1d6 rounds, (4-5) 1d10 minutes, or (6)1d8 hours.
-
-Source: [Filling in the Blanks](https://www.drivethrurpg.com/en/product/325708/filling-in-the-blanks)
 
 #### Resources
 
@@ -169,7 +102,7 @@ Look at other features in the hex or surrounding hexes to determine what the sig
 
 Use [Filling in the Blanks](./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf) under 3. Structures on p. 19-45.
 
-Steps:
+Here's the steps to determine what kind of structures are on your map:
 
 1. Roll a d10 for possible structures
 2. Additional roles for more details on structure
@@ -179,3 +112,14 @@ Steps:
 
 Use [Filling in the Blanks](./Resources/Rules/Filling_in_the_Blanks_PDF_v.3.1.pdf) under 2. Geologic on p. 48-56.
 Rock Formations p14
+
+<div class="roll-results rpgui-container framed-golden-2" style="width: 100%; position:relative; height:auto; display:inline-block">
+    <h2>Other Terrain Features</h2>
+    <input id="rocky-terrain" placeholder="Type of rocky terrain?" style="width: 78%" /> <button onClick="document.getElementById('rocky-terrain').value=rockyTerrain()" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <input id="natural-rock-formation" placeholder="Naturally occurring rock formation?" style="width: 78%" /> <button onClick="document.getElementById('natural-rock-formation').value=rocksNaturallyOccurring()" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <textarea id="unusual-rocks" placeholder="Something unusual about the rocks?" rows="5"></textarea> <button onClick="document.getElementById('unusual-rocks').value=rocksUnusual()" class="rpgui-button" type="button"><p>Re-roll</p></button>
+    <br/>
+    <input id="hot-springs" placeholder="Hotsprings" style="width: 78%" /> <button onClick="hotSprings('hot-springs')" class="rpgui-button" type="button"><p>Re-roll</p></button>
+</div>
+
+<div style="clear: both;"></div>

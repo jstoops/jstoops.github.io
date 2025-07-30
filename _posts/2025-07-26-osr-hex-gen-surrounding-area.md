@@ -66,9 +66,9 @@ Here's the steps to set the starting location on the World map (known as Atlas-l
 
 ## Generate Surroundings Atlas-level Hex Terrain
 
-Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 173 of the DMG to generate terrain surrounding starting tile. For the Atlas-level that's just 6 tiles.
+Use APPENDIX B: RANDOM WILDERNESS TERRAIN table on page 173 of the [DMG](https://www.drivethrurpg.com/en/product/17004/dungeon-master-s-guide-1e) to generate terrain surrounding starting tile. For the Atlas-level that's just 6 tiles.
 
-The tool below allows you to select the starting tile terrain type, "Plains" in this caase, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.
+The tool below allows you to select the starting tile terrain type, "Plains" in this case, and then click the link in step 1 to randomly generating the terrain types for the 6 surrounding tiles.
 
 Here's the steps to generate terrain:
 
@@ -138,7 +138,7 @@ _Appendix B – Terrain Guide_
 - **Pond:** pools, tarn, lake e.g. _Cosmic Planet High Water Medium Temperature_ with Override Default Scale and Scale height independently set appropriately for size and shape of pond/lake in Worldographer
 - **Depression:** gorge, rift, valley, canyon e.g. _Symbol Crater_ with Color override, Override Default Scale, Scale height independently and Rotate (clockwise) set appropriately for size, color and direction of gorge in Worldographer
 
-Source: DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN
+Source: [DMG p173 APPENDIX B: RANDOM WILDERNESS TERRAIN](https://www.drivethrurpg.com/en/product/17004/dungeon-master-s-guide-1e)
 
 Can continue to build out map at this level, if desired.
 
@@ -160,7 +160,7 @@ Here's the steps to drill into the central hex at the Atlas-level to start creat
 
 ## Generate Sub-level Hex Terrain
 
-This follows the same process as generatign terrain at the Atlas-level except it is for 31 hexes this time.
+This follows the same process as generating terrain at the Atlas-level except it is for 31 hexes this time.
 
 Here's the steps to generate the terrain for the times surrounding your starting settlement:
 
